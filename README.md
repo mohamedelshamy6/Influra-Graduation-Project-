@@ -1,16 +1,9 @@
-# influra
+# Influra App
+The intelligent influencer marketing platform designed to skyrocket your brand's popularity and profits.  
+### Influra
+Is a platform that helps business owners create ads for their businesses by collaborating with influencers and vloggers.  
+This can be a great way to reach a wider audience and increase your profits.
 
-A new Flutter project.
+## 🎨 System Design
+![System_Design](https://github.com/mohamedelshamy6/Influra-Graduation-Project-/assets/73137782/6397e9c6-4a96-4005-a74f-4d3036452123)
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
