@@ -7,7 +7,8 @@ class InfluraApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
-      designSize: const Size(380, 812),
+      //* The size of the screen of figma design.
+      designSize: const Size(430, 932),
       minTextAdapt: true,
       splitScreenMode: true,
       child: MaterialApp(
