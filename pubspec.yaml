@@ -8,7 +8,7 @@ publish_to: 'none'
 version: 1.0.0+1
 
 environment:
-  sdk: '>=3.2.5 <4.0.0'
+  sdk: '>=3.1.2 <4.0.0'
 
 # An extension for generating assets file located in helpers folder.
 flutter_assets:
@@ -27,7 +27,6 @@ dependencies:
   google_fonts: ^6.1.0
   flutter_svg: ^2.0.9
   font_awesome_flutter: ^10.7.0
-  lottie: ^3.0.0
   image_picker: ^1.0.7
   flutter_native_splash: ^2.0.2
   # For networking.
