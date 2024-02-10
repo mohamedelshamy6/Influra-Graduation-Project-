@@ -5,4 +5,5 @@ import 'package:influra/influra.dart';
 void main() async{
   await ScreenUtil.ensureScreenSize();
   runApp(const InfluraApp());
+  //
 }
