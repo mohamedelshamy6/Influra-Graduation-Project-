@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:influra/core/helpers/app_colors.dart';
+import 'package:influra/core/routing/routes.dart';
+
+import 'core/routing/app_routes.dart';
 
 class InfluraApp extends StatelessWidget {
   const InfluraApp({super.key});
@@ -12,8 +16,12 @@ class InfluraApp extends StatelessWidget {
       minTextAdapt: true,
       splitScreenMode: true,
       child: MaterialApp(
+        initialRoute: Routes.splashScreen,
+        onGenerateRoute: AppRoutes().generateRoute,
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
+          primaryColorLight: AppColors.mainBlue,
+          scaffoldBackgroundColor: const Color(0xffFFFFFF),
           useMaterial3: true,
           brightness: Brightness.light,
         ),
