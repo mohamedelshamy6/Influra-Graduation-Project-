@@ -9,9 +9,17 @@ class Assets {
   /// assets/icons/email.svg
   static const String iconsEmail = "assets/icons/email.svg";
 
+  /// Assets for iconsFacbookFilledBlue
+  /// assets/icons/facbook_filled_blue.svg
+  static const String iconsFacbookFilledBlue = "assets/icons/facbook_filled_blue.svg";
+
   /// Assets for iconsFacebook
   /// assets/icons/facebook.svg
   static const String iconsFacebook = "assets/icons/facebook.svg";
+
+  /// Assets for iconsGoogle
+  /// assets/icons/google.svg
+  static const String iconsGoogle = "assets/icons/google.svg";
 
   /// Assets for iconsInfluraAndroid12After
   /// assets/icons/influra_android12_after.png
@@ -24,6 +32,10 @@ class Assets {
   /// Assets for iconsInsta
   /// assets/icons/insta.svg
   static const String iconsInsta = "assets/icons/insta.svg";
+
+  /// Assets for iconsInstaColored
+  /// assets/icons/insta_colored.svg
+  static const String iconsInstaColored = "assets/icons/insta_colored.svg";
 
   /// Assets for iconsLock
   /// assets/icons/lock.svg

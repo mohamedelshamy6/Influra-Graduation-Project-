@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:influra/core/routing/routes.dart';
-import 'package:influra/features/auth/view/screens/signup_business_owner.dart';
-import 'package:influra/features/auth/view/screens/signup_influencer.dart';
-import 'package:influra/features/auth/view/screens/signup_selection.dart';
+import 'package:influra/features/auth/view/screens/sign_up/signup_business_owner.dart';
+import 'package:influra/features/auth/view/screens/sign_up/signup_influencer.dart';
+import 'package:influra/features/auth/view/screens/sign_up/signup_selection.dart';
 
 class CustomPageRoute extends MaterialPageRoute {
   @override
