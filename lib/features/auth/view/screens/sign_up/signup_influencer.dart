@@ -6,8 +6,8 @@ import 'package:influra/core/widgets/custom_text_form_field.dart';
 import 'package:influra/features/auth/view/widgets/already_have_account.dart';
 import 'package:influra/features/auth/view/widgets/auth_header.dart';
 import 'package:influra/features/auth/view/widgets/auth_title_svg.dart';
-import '../../../../core/theme/app_text_styles.dart';
-import '../../../../core/widgets/custom_button.dart';
+import '../../../../../core/theme/app_text_styles.dart';
+import '../../../../../core/widgets/custom_button.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class SignUpInfluencer extends StatelessWidget {
