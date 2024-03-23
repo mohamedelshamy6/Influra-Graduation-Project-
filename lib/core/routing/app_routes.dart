@@ -1,14 +1,30 @@
 import 'package:flutter/material.dart';
 import 'package:influra/core/routing/routes.dart';
+import 'package:influra/features/auth/view/screens/signup_business_owner.dart';
+import 'package:influra/features/auth/view/screens/signup_influencer.dart';
+import 'package:influra/features/auth/view/screens/signup_selection.dart';
 
-import '../../features/on_boarding/view/screens/on_boarding.dart';
+class CustomPageRoute extends MaterialPageRoute {
+  @override
+  Duration get transitionDuration => const Duration(milliseconds: 750);
+
+  CustomPageRoute({builder}) : super(builder: builder);
+}
 
 class AppRoutes {
   Route? generateRoute(RouteSettings routeSettings) {
     switch (routeSettings.name) {
-      case Routes.splashScreen:
+      case Routes.signUpSelection:
         return MaterialPageRoute(
-          builder: (context) => const SplashScreen(),
+          builder: (context) => const SignUpSelection(),
+        );
+      case Routes.signUpInfluencer:
+        return CustomPageRoute(
+          builder: (context) => const SignUpInfluencer(),
+        );
+      case Routes.signUpBusinessOwner:
+        return CustomPageRoute(
+          builder: (context) => const SignUpBusinessOwner(),
         );
     }
     return null;
