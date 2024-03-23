@@ -33,9 +33,12 @@ class SignUpInfluencer extends StatelessWidget {
             children: [
               const AuthTitleSvg(),
               SizedBox(height: 32.h),
-              const Align(
-                alignment: Alignment.centerLeft,
-                child: AuthHeader(authHeader: 'Sign Up as influencer'),
+              const Hero(
+                tag: 'signUpBusiness',
+                child: Align(
+                  alignment: Alignment.centerLeft,
+                  child: AuthHeader(authHeader: 'Sign Up as influencer'),
+                ),
               ),
               SizedBox(height: 32.h),
               CustomTFF(
