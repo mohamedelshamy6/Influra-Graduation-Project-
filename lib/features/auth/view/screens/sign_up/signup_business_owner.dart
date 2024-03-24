@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:influra/core/helpers/app_colors.dart';
+import 'package:influra/core/theme/app_colors.dart';
 import 'package:influra/core/helpers/app_images.dart';
 import 'package:influra/core/widgets/custom_text_form_field.dart';
 import 'package:influra/features/auth/view/widgets/already_have_account.dart';
@@ -18,6 +18,7 @@ class SignUpBusinessOwner extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        scrolledUnderElevation: 0,
         iconTheme: IconThemeData(color: AppColors.mainBlue, size: 36.r),
         backgroundColor: Colors.white,
         elevation: 0,
@@ -48,10 +49,15 @@ class SignUpBusinessOwner extends StatelessWidget {
                 kbType: TextInputType.name,
               ),
               SizedBox(height: 32.h),
-              CustomTFF(
-                hintText: 'Email',
-                prefixIcon: SvgPicture.asset(Assets.iconsEmail),
-                kbType: TextInputType.emailAddress,
+              Hero(
+                tag: 'email',
+                child: Material(
+                  child: CustomTFF(
+                    hintText: 'Email',
+                    prefixIcon: SvgPicture.asset(Assets.iconsEmail),
+                    kbType: TextInputType.emailAddress,
+                  ),
+                ),
               ),
               SizedBox(height: 32.h),
               CustomTFF(
@@ -60,10 +66,15 @@ class SignUpBusinessOwner extends StatelessWidget {
                 kbType: TextInputType.text,
               ),
               SizedBox(height: 32.h),
-              CustomTFF(
-                hintText: 'Password',
-                prefixIcon: SvgPicture.asset(Assets.iconsLock),
-                kbType: TextInputType.visiblePassword,
+              Hero(
+                tag: 'password',
+                child: Material(
+                  child: CustomTFF(
+                    hintText: 'Password',
+                    prefixIcon: SvgPicture.asset(Assets.iconsLock),
+                    kbType: TextInputType.visiblePassword,
+                  ),
+                ),
               ),
               SizedBox(height: 32.h),
               CustomTFF(
