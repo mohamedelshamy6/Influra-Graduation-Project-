@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:influra/core/routing/routes.dart';
+import 'package:influra/features/auth/view/screens/login/login.dart';
 import 'package:influra/features/auth/view/screens/sign_up/signup_business_owner.dart';
 import 'package:influra/features/auth/view/screens/sign_up/signup_influencer.dart';
 import 'package:influra/features/auth/view/screens/sign_up/signup_selection.dart';
@@ -25,6 +26,10 @@ class AppRoutes {
       case Routes.signUpBusinessOwner:
         return CustomPageRoute(
           builder: (context) => const SignUpBusinessOwner(),
+        );
+      case Routes.loginScreen:
+        return CustomPageRoute(
+          builder: (context) => const LoginScreen(),
         );
     }
     return null;
