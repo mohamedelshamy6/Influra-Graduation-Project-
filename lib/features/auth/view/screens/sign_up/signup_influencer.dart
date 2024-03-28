@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:influra/core/theme/app_colors.dart';
-import 'package:influra/core/helpers/app_images.dart';
-import 'package:influra/core/widgets/custom_text_form_field.dart';
-import 'package:influra/features/auth/view/widgets/already_have_account.dart';
-import 'package:influra/features/auth/view/widgets/auth_header.dart';
-import 'package:influra/features/auth/view/widgets/auth_title_svg.dart';
+import '../../../../../core/helpers/app_images.dart';
+import '../../../../../core/widgets/custom_text_form_field.dart';
+import '../../widgets/already_have_account.dart';
+import '../../widgets/auth_header.dart';
+import '../../widgets/auth_title_svg.dart';
+import '../../../../../core/routing/routes.dart';
 import '../../../../../core/theme/app_text_styles.dart';
 import '../../../../../core/widgets/custom_button.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -16,12 +16,7 @@ class SignUpInfluencer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        scrolledUnderElevation: 0,
-        iconTheme: IconThemeData(color: AppColors.mainBlue, size: 36.r),
-        backgroundColor: Colors.white,
-        elevation: 0,
-      ),
+      appBar: AppBar(),
       body: SafeArea(
         child: Padding(
           padding: EdgeInsets.only(
@@ -49,7 +44,7 @@ class SignUpInfluencer extends StatelessWidget {
               ),
               SizedBox(height: 32.h),
               Hero(
-                tag:'email',
+                tag: 'email',
                 child: Material(
                   child: CustomTFF(
                     hintText: 'Email',
@@ -57,30 +52,6 @@ class SignUpInfluencer extends StatelessWidget {
                     kbType: TextInputType.emailAddress,
                   ),
                 ),
-              ),
-              SizedBox(height: 32.h),
-              CustomTFF(
-                hintText: 'Link for Facebook ',
-                prefixIcon: SvgPicture.asset(Assets.iconsFacebook),
-                kbType: TextInputType.url,
-              ),
-              SizedBox(height: 32.h),
-              CustomTFF(
-                hintText: 'Link for Instagram ',
-                prefixIcon: SvgPicture.asset(Assets.iconsInsta),
-                kbType: TextInputType.url,
-              ),
-              SizedBox(height: 32.h),
-              CustomTFF(
-                hintText: 'Link for Youtube',
-                prefixIcon: SvgPicture.asset(Assets.iconsYoutube),
-                kbType: TextInputType.url,
-              ),
-              SizedBox(height: 32.h),
-              CustomTFF(
-                hintText: 'Link for X ',
-                prefixIcon: SvgPicture.asset(Assets.iconsTwitter),
-                kbType: TextInputType.url,
               ),
               SizedBox(height: 32.h),
               Hero(
@@ -103,11 +74,15 @@ class SignUpInfluencer extends StatelessWidget {
               Hero(
                 tag: 'signUp',
                 child: CustomButton(
-                  buttonText: 'Sign Up',
-                  buttonAction: () {},
+                  buttonText: 'Next',
+                  buttonAction: () => Navigator.pushNamed(
+                    context,
+                    Routes.continueSignUpInfluencer,
+                  ),
                   buttonStyle: AppTextStyles.interBold15White,
                 ),
               ),
+              SizedBox(height: 16.h),
               const AlreadyHaveAccount(),
             ],
           ),
@@ -115,4 +90,4 @@ class SignUpInfluencer extends StatelessWidget {
       ),
     );
   }
-}
+ }

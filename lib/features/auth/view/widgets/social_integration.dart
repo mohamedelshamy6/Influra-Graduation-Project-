@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:influra/core/theme/app_colors.dart';
-import 'package:influra/core/helpers/app_images.dart';
-import 'package:influra/core/theme/app_text_styles.dart';
+
+import '../../../../core/helpers/app_images.dart';
+import '../../../../core/theme/app_colors.dart';
+import '../../../../core/theme/app_text_styles.dart';
 
 class SocialIntegration extends StatelessWidget {
   final String title;
@@ -83,11 +84,13 @@ class PlatformCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
+      splashFactory: NoSplash.splashFactory,
       onTap: integrateWith,
       child: SizedBox(
         height: 60.h,
         width: 60.h,
         child: Card(
+          surfaceTintColor: Colors.white,
           elevation: 8,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(16.r),

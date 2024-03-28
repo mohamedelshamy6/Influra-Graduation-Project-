@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:influra/core/theme/app_text_styles.dart';
+import '../theme/app_text_styles.dart';
 
 import '../theme/app_colors.dart';
 
@@ -55,6 +55,8 @@ class _CustomTFFState extends State<CustomTFF> {
           suffixIcon: widget.hintText == 'Password' ||
                   widget.hintText == 'Confirm password'
               ? IconButton(
+                  style:
+                      const ButtonStyle(splashFactory: NoSplash.splashFactory),
                   onPressed: () {
                     setState(() {
                       showPassword = !showPassword;

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:influra/core/helpers/app_images.dart';
+import '../../../../core/helpers/app_images.dart';
 
 class AuthTitleSvg extends StatelessWidget {
   const AuthTitleSvg({super.key});

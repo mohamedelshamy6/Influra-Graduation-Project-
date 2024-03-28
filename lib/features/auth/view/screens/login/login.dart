@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:influra/core/routing/routes.dart';
-import 'package:influra/features/auth/view/widgets/social_integration.dart';
+import '../../../../../core/routing/routes.dart';
+import '../../widgets/social_integration.dart';
 
 import '../../../../../core/helpers/app_images.dart';
 import '../../../../../core/theme/app_colors.dart';
@@ -18,12 +18,7 @@ class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        scrolledUnderElevation: 0,
-        iconTheme: IconThemeData(color: AppColors.mainBlue, size: 36.r),
-        backgroundColor: Colors.white,
-        elevation: 0,
-      ),
+      appBar: AppBar(),
       body: SafeArea(
         child: Padding(
           padding: EdgeInsets.only(
@@ -66,6 +61,9 @@ class LoginScreen extends StatelessWidget {
               Align(
                 alignment: Alignment.centerRight,
                 child: TextButton(
+                  style: const ButtonStyle(
+                    splashFactory: NoSplash.splashFactory,
+                  ),
                   onPressed: () {},
                   child: Text(
                     'Forgot password?',
@@ -98,7 +96,10 @@ class LoginScreen extends StatelessWidget {
                     style: AppTextStyles.interRegular15Blue,
                   ),
                   TextButton(
-                    style: TextButton.styleFrom(padding: EdgeInsets.zero),
+                    style: TextButton.styleFrom(
+                      padding: EdgeInsets.zero,
+                      splashFactory: NoSplash.splashFactory,
+                    ),
                     onPressed: () =>
                         Navigator.of(context).pushNamedAndRemoveUntil(
                       Routes.signUpSelection,
