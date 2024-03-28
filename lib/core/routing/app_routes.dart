@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:influra/core/routing/routes.dart';
-import 'package:influra/features/auth/view/screens/login/login.dart';
-import 'package:influra/features/auth/view/screens/sign_up/signup_business_owner.dart';
-import 'package:influra/features/auth/view/screens/sign_up/signup_influencer.dart';
-import 'package:influra/features/auth/view/screens/sign_up/signup_selection.dart';
+import 'routes.dart';
+import '../../features/auth/view/screens/login/login.dart';
+import '../../features/auth/view/screens/sign_up/continue_signup_influencer.dart';
+import '../../features/auth/view/screens/sign_up/signup_business_owner.dart';
+import '../../features/auth/view/screens/sign_up/signup_influencer.dart';
+import '../../features/auth/view/screens/sign_up/signup_selection.dart';
 
 class CustomPageRoute extends MaterialPageRoute {
   @override
@@ -30,6 +31,10 @@ class AppRoutes {
       case Routes.loginScreen:
         return CustomPageRoute(
           builder: (context) => const LoginScreen(),
+        );
+      case Routes.continueSignUpInfluencer:
+        return CustomPageRoute(
+          builder: (context) => const ContinueSignUpInfluencer(),
         );
     }
     return null;

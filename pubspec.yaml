@@ -32,11 +32,12 @@ dependencies:
   flutter_svg: ^2.0.9
   image_picker: ^1.0.7
   cached_network_image: ^3.3.1
-  #App deplotment.
+  #App deployment.
   flutter_native_splash: ^2.0.2
   flutter_launcher_icons: ^0.13.1
   # For networking.
   dio: ^5.4.0
+  # State Management & Logic
   flutter_bloc: ^8.1.3
   # For responsivity.
   flutter_screenutil: ^5.9.0
