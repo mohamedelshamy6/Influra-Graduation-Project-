@@ -35,7 +35,7 @@ class SocialIntegration extends StatelessWidget {
               padding: EdgeInsets.symmetric(horizontal: 8.w),
               child: Text(
                 title,
-                style: AppTextStyles.interBold15blue,
+                style: AppTextStyles.poppinsBold15blue,
               ),
             ),
             const Expanded(
@@ -85,6 +85,8 @@ class PlatformCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       splashFactory: NoSplash.splashFactory,
+      hoverColor: Colors.transparent,
+      highlightColor: Colors.transparent,
       onTap: integrateWith,
       child: SizedBox(
         height: 60.h,

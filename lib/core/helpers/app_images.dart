@@ -57,6 +57,10 @@ class Assets {
   /// assets/images/icon_launcher_background.png
   static const String imagesIconLauncherBackground = "assets/images/icon_launcher_background.png";
 
+  /// Assets for svgsDone
+  /// assets/svgs/done.svg
+  static const String svgsDone = "assets/svgs/done.svg";
+
   /// Assets for svgsInflura
   /// assets/svgs/influra.svg
   static const String svgsInflura = "assets/svgs/influra.svg";

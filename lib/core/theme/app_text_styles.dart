@@ -5,24 +5,50 @@ import 'package:google_fonts/google_fonts.dart';
 import 'app_colors.dart';
 
 class AppTextStyles {
-  static TextStyle interBold15blue = GoogleFonts.inter(
+  static TextStyle poppinsBold15blue = GoogleFonts.poppins(
     color: AppColors.mainBlue,
     fontSize: 15.sp,
     fontWeight: FontWeight.w700,
   );
-  static TextStyle interBold30Blue = GoogleFonts.inter(
+  static TextStyle poppinsBold30Blue = GoogleFonts.poppins(
     color: AppColors.mainBlue,
     fontSize: 30.sp,
     fontWeight: FontWeight.w700,
   );
-  static TextStyle interBold15White = GoogleFonts.inter(
+  static TextStyle poppinsBold15White = GoogleFonts.poppins(
     color: Colors.white,
     fontSize: 15.sp,
     fontWeight: FontWeight.w700,
   );
-  static TextStyle interRegular15Blue = GoogleFonts.inter(
-    color:AppColors.mainBlue,
+  static TextStyle poppinsRegular15Blue = GoogleFonts.poppins(
+    color: AppColors.mainBlue,
     fontSize: 15.sp,
     fontWeight: FontWeight.w400,
+  );
+  static TextStyle valdiationError = GoogleFonts.poppins(
+    color: Colors.red.withOpacity(0.8),
+    fontSize: 14.sp,
+    fontWeight: FontWeight.w400,
+  );
+  static TextStyle poppinsBold24black = GoogleFonts.poppins(
+    color: Colors.black,
+    fontSize: 24.sp,
+    fontWeight: FontWeight.w700,
+  );
+  static TextStyle poppinsRegular16SecoondaryBlue = GoogleFonts.poppins(
+    color: AppColors.secondaryBlue,
+    fontSize: 16.sp,
+    fontWeight: FontWeight.w400,
+  );
+
+  static TextStyle poppinsBold26white = GoogleFonts.poppins(
+    color: Colors.white,
+    fontSize: 26.sp,
+    fontWeight: FontWeight.w700,
+  );
+  static TextStyle poppinsBold22Black = GoogleFonts.poppins(
+    color: Colors.black,
+    fontSize: 22.sp,
+    fontWeight: FontWeight.w700,
   );
 }

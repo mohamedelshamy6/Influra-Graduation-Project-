@@ -24,76 +24,77 @@ class SignUpBusinessOwner extends StatelessWidget {
             right: 24.w,
             bottom: 16.h,
           ),
-          child: ListView(
-            shrinkWrap: true,
-            children: [
-              const AuthTitleSvg(),
-              SizedBox(height: 32.h),
-              const Hero(
-                tag: 'signUpBusiness',
-                child: Align(
-                  alignment: Alignment.centerLeft,
-                  child: AuthHeader(authHeader: 'Sign Up as business owner'),
-                ),
-              ),
-              SizedBox(height: 32.h),
-              CustomTFF(
-                hintText: 'Full name',
-                prefixIcon: SvgPicture.asset(Assets.iconsPerson),
-                kbType: TextInputType.name,
-              ),
-              SizedBox(height: 32.h),
-              Hero(
-                tag: 'email',
-                child: Material(
-                  child: CustomTFF(
-                    hintText: 'Email',
-                    prefixIcon: SvgPicture.asset(Assets.iconsEmail),
-                    kbType: TextInputType.emailAddress,
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                const AuthTitleSvg(),
+                SizedBox(height: 32.h),
+                const Hero(
+                  tag: 'signUpBusiness',
+                  child: Align(
+                    alignment: Alignment.centerLeft,
+                    child: AuthHeader(authHeader: 'Sign Up as business owner'),
                   ),
                 ),
-              ),
-              SizedBox(height: 32.h),
-              CustomTFF(
-                hintText: 'Business type',
-                prefixIcon: SvgPicture.asset(Assets.iconsBusiness),
-                kbType: TextInputType.text,
-              ),
-              SizedBox(height: 32.h),
-              Hero(
-                tag: 'password',
-                child: Material(
-                  child: CustomTFF(
-                    hintText: 'Password',
-                    prefixIcon: SvgPicture.asset(Assets.iconsLock),
-                    kbType: TextInputType.visiblePassword,
+                SizedBox(height: 32.h),
+                CustomTFF(
+                  hintText: 'Full name',
+                  prefixIcon: SvgPicture.asset(Assets.iconsPerson),
+                  kbType: TextInputType.name,
+                ),
+                SizedBox(height: 32.h),
+                Hero(
+                  tag: 'email',
+                  child: Material(
+                    child: CustomTFF(
+                      hintText: 'Email',
+                      prefixIcon: SvgPicture.asset(Assets.iconsEmail),
+                      kbType: TextInputType.emailAddress,
+                    ),
                   ),
                 ),
-              ),
-              SizedBox(height: 32.h),
-              CustomTFF(
-                hintText: 'Confirm password',
-                prefixIcon: SvgPicture.asset(Assets.iconsLock),
-                kbType: TextInputType.visiblePassword,
-              ),
-              SizedBox(height: 32.h),
-              Hero(
-                tag: 'signUp',
-                child: CustomButton(
-                  buttonText: 'Sign Up',
-                  buttonAction: () {},
-                  buttonStyle: AppTextStyles.interBold15White,
+                SizedBox(height: 32.h),
+                CustomTFF(
+                  hintText: 'Business type',
+                  prefixIcon: SvgPicture.asset(Assets.iconsBusiness),
+                  kbType: TextInputType.text,
                 ),
-              ),
-              SizedBox(height: 24.h),
-              SocialIntegration(
-                title: 'Or Sign Up With',
-                integrateWithGoogle: () {},
-                integrateWithFacebook: () {},
-                integrateWithInsta: () {},
-              ),
-              const AlreadyHaveAccount(),
-            ],
+                SizedBox(height: 32.h),
+                Hero(
+                  tag: 'password',
+                  child: Material(
+                    child: CustomTFF(
+                      hintText: 'Password',
+                      prefixIcon: SvgPicture.asset(Assets.iconsLock),
+                      kbType: TextInputType.visiblePassword,
+                    ),
+                  ),
+                ),
+                SizedBox(height: 32.h),
+                CustomTFF(
+                  hintText: 'Confirm password',
+                  prefixIcon: SvgPicture.asset(Assets.iconsLock),
+                  kbType: TextInputType.visiblePassword,
+                ),
+                SizedBox(height: 32.h),
+                Hero(
+                  tag: 'signUp',
+                  child: CustomButton(
+                    buttonText: 'Sign Up',
+                    buttonAction: () {},
+                    buttonStyle: AppTextStyles.poppinsBold15White,
+                  ),
+                ),
+                SizedBox(height: 24.h),
+                SocialIntegration(
+                  title: 'Or Sign Up With',
+                  integrateWithGoogle: () {},
+                  integrateWithFacebook: () {},
+                  integrateWithInsta: () {},
+                ),
+                const AlreadyHaveAccount(),
+              ],
+            ),
           ),
         ),
       ),
