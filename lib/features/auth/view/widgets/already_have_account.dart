@@ -13,11 +13,12 @@ class AlreadyHaveAccount extends StatelessWidget {
       children: [
         Text(
           'Already have an account?',
-          style: AppTextStyles.interRegular15Blue,
+          style: AppTextStyles.poppinsRegular15Blue,
         ),
         TextButton(
-          style: TextButton.styleFrom(
-            padding: EdgeInsets.zero,
+          style: const ButtonStyle(
+            padding: MaterialStatePropertyAll(EdgeInsets.zero),
+            overlayColor: MaterialStatePropertyAll(Colors.transparent),
             splashFactory: NoSplash.splashFactory,
           ),
           onPressed: () => Navigator.pushNamed(
@@ -26,7 +27,7 @@ class AlreadyHaveAccount extends StatelessWidget {
           ),
           child: Text(
             'Sign In',
-            style: AppTextStyles.interBold15blue,
+            style: AppTextStyles.poppinsBold15blue,
           ),
         ),
       ],

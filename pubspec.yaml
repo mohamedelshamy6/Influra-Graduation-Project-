@@ -32,7 +32,7 @@ dependencies:
   flutter_svg: ^2.0.9
   image_picker: ^1.0.7
   cached_network_image: ^3.3.1
-  #App deployment.
+  #App icon and splash.
   flutter_native_splash: ^2.0.2
   flutter_launcher_icons: ^0.13.1
   # For networking.
@@ -43,6 +43,9 @@ dependencies:
   flutter_screenutil: ^5.9.0
   # For dependency injection.
   get_it: ^7.6.7
+  # For ready custom input fields.
+  intl_phone_field: ^3.2.0
+  pinput: ^4.0.0
   
 #changing the application icon.
 flutter_launcher_icons:
@@ -68,3 +71,4 @@ flutter:
     - assets/images/
     - assets/svgs/
     - assets/icons/
+    - assets/fonts/poppins/

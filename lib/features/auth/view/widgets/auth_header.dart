@@ -9,7 +9,7 @@ class AuthHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       authHeader,
-      style: AppTextStyles.interBold30Blue
+      style: AppTextStyles.poppinsBold30Blue
           .copyWith(decoration: TextDecoration.none),
     );
   }

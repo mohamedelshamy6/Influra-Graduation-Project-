@@ -10,7 +10,9 @@ class CustomTFF extends StatefulWidget {
   final TextEditingController? controller;
   final Widget? suffixIcon;
   final Widget? prefixIcon;
+  final double? height;
   final dynamic validate;
+  final void Function(String)? onChanged;
   const CustomTFF({
     Key? key,
     this.suffixIcon,
@@ -19,6 +21,8 @@ class CustomTFF extends StatefulWidget {
     required this.kbType,
     this.controller,
     this.validate,
+    this.height,
+    this.onChanged,
   }) : super(key: key);
 
   @override
@@ -27,6 +31,7 @@ class CustomTFF extends StatefulWidget {
 
 class _CustomTFFState extends State<CustomTFF> {
   bool showPassword = false;
+  String content = '';
 
   @override
   Widget build(BuildContext context) {
@@ -35,16 +40,25 @@ class _CustomTFFState extends State<CustomTFF> {
       width: 2,
     );
     return SizedBox(
-      height: 50.h,
       child: TextFormField(
+        autovalidateMode: AutovalidateMode.onUserInteraction,
         obscureText: widget.hintText == 'Password' ||
-                widget.hintText == 'Confirm password'
+                widget.hintText == 'New Password' ||
+                widget.hintText == 'Confirm password' ||
+                widget.hintText == 'Confirm New Password'
             ? showPassword
                 ? false
                 : true
             : false,
-        style: AppTextStyles.interRegular15Blue,
+        style: AppTextStyles.poppinsRegular15Blue,
         textAlignVertical: TextAlignVertical.center,
+        validator: widget.validate,
+        onChanged: widget.onChanged ??
+            (value) {
+              setState(() {
+                content = value;
+              });
+            },
         controller: widget.controller,
         decoration: InputDecoration(
           hintFadeDuration: const Duration(milliseconds: 100),
@@ -53,10 +67,14 @@ class _CustomTFFState extends State<CustomTFF> {
             child: widget.prefixIcon,
           ),
           suffixIcon: widget.hintText == 'Password' ||
-                  widget.hintText == 'Confirm password'
+                  widget.hintText == 'New Password' ||
+                  widget.hintText == 'Confirm password' ||
+                  widget.hintText == 'Confirm New Password'
               ? IconButton(
-                  style:
-                      const ButtonStyle(splashFactory: NoSplash.splashFactory),
+                  style: const ButtonStyle(
+                    splashFactory: NoSplash.splashFactory,
+                    overlayColor: MaterialStatePropertyAll(Colors.transparent),
+                  ),
                   onPressed: () {
                     setState(() {
                       showPassword = !showPassword;
@@ -69,6 +87,7 @@ class _CustomTFFState extends State<CustomTFF> {
                 )
               : widget.suffixIcon,
           prefixIconColor: AppColors.mainBlue,
+          errorStyle: AppTextStyles.valdiationError,
           fillColor: Colors.white,
           filled: true,
           focusedBorder: OutlineInputBorder(
@@ -91,7 +110,7 @@ class _CustomTFFState extends State<CustomTFF> {
           ),
           hintText: widget.hintText,
           contentPadding: EdgeInsets.symmetric(horizontal: 16.h),
-          hintStyle: AppTextStyles.interRegular15Blue.copyWith(
+          hintStyle: AppTextStyles.poppinsRegular15Blue.copyWith(
             color: Colors.black.withOpacity(0.3),
           ),
         ),

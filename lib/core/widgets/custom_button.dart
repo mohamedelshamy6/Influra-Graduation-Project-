@@ -8,18 +8,24 @@ class CustomButton extends StatelessWidget {
     required this.buttonText,
     required this.buttonAction,
     required this.buttonStyle,
+    this.height,
+    this.width,
   });
 
   final String buttonText;
   final TextStyle buttonStyle;
-  final Function() buttonAction;
+  final void Function()? buttonAction;
+  final double? height;
+  final double? width;
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: double.infinity,
-      height: 50.h,
+      width: width ?? double.infinity,
+      height: height ?? 50.h,
       child: MaterialButton(
+        disabledColor: AppColors.secondaryBlue,
+        disabledTextColor: AppColors.contactDetailsWayUnselectedColor,
         onPressed: buttonAction,
         padding: EdgeInsets.zero,
         color: AppColors.mainBlue,

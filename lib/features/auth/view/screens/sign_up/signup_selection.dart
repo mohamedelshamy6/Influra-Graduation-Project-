@@ -15,7 +15,7 @@ class SignUpSelection extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 64.h),
+          padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 48.h),
           child: SingleChildScrollView(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -27,7 +27,7 @@ class SignUpSelection extends StatelessWidget {
                 Hero(
                   tag: 'signUp',
                   child: CustomButton(
-                    buttonStyle: AppTextStyles.interBold15White,
+                    buttonStyle: AppTextStyles.poppinsBold15White,
                     buttonText: 'Sign Up as influencer',
                     buttonAction: () =>
                         Navigator.pushNamed(context, Routes.signUpInfluencer),
@@ -37,7 +37,7 @@ class SignUpSelection extends StatelessWidget {
                 Center(
                   child: Text(
                     'Or',
-                    style: AppTextStyles.interBold30Blue,
+                    style: AppTextStyles.poppinsBold30Blue,
                   ),
                 ),
                 SizedBox(height: 48.h),
@@ -49,7 +49,7 @@ class SignUpSelection extends StatelessWidget {
                       context,
                       Routes.signUpBusinessOwner,
                     ),
-                    buttonStyle: AppTextStyles.interBold15White,
+                    buttonStyle: AppTextStyles.poppinsBold15White,
                   ),
                 ),
                 SizedBox(height: 150.h),
