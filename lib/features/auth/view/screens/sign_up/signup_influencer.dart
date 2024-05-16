@@ -43,7 +43,7 @@ class SignUpInfluencer extends StatelessWidget {
                   SizedBox(height: 32.h),
                   CustomTFF(
                     hintText: 'Full name',
-                    prefixIcon: SvgPicture.asset(Assets.iconsPerson),
+                    prefixIcon: SvgPicture.asset(Assets.iconsAuthPerson),
                     kbType: TextInputType.name,
                     validate: (value) {
                       return ValidationErrorTexts.fullNameValidation(value);
@@ -55,7 +55,7 @@ class SignUpInfluencer extends StatelessWidget {
                     child: Material(
                       child: CustomTFF(
                         hintText: 'Email',
-                        prefixIcon: SvgPicture.asset(Assets.iconsEmail),
+                        prefixIcon: SvgPicture.asset(Assets.iconsAuthEmail),
                         kbType: TextInputType.emailAddress,
                         validate: (value) {
                           return ValidationErrorTexts.emailValidation(value);
@@ -69,7 +69,7 @@ class SignUpInfluencer extends StatelessWidget {
                     child: Material(
                       child: CustomTFF(
                         hintText: 'Password',
-                        prefixIcon: SvgPicture.asset(Assets.iconsLock),
+                        prefixIcon: SvgPicture.asset(Assets.iconsAuthLock),
                         kbType: TextInputType.visiblePassword,
                         validate: (value) {
                           return ValidationErrorTexts.signUpPasswordValidation(
@@ -82,7 +82,7 @@ class SignUpInfluencer extends StatelessWidget {
                   SizedBox(height: 32.h),
                   CustomTFF(
                     hintText: 'Confirm password',
-                    prefixIcon: SvgPicture.asset(Assets.iconsLock),
+                    prefixIcon: SvgPicture.asset(Assets.iconsAuthLock),
                     kbType: TextInputType.visiblePassword,
                     validate: (value) {
                       // ToDo change validation confirm password value with password field value

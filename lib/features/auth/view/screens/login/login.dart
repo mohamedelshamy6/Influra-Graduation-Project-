@@ -45,7 +45,7 @@ class LoginScreen extends StatelessWidget {
                     child: Material(
                       child: CustomTFF(
                         hintText: 'Email',
-                        prefixIcon: SvgPicture.asset(Assets.iconsEmail),
+                        prefixIcon: SvgPicture.asset(Assets.iconsAuthEmail),
                         kbType: TextInputType.emailAddress,
                         validate: (value) {
                           return ValidationErrorTexts.emailValidation(value);
@@ -59,7 +59,7 @@ class LoginScreen extends StatelessWidget {
                     child: Material(
                       child: CustomTFF(
                         hintText: 'Password',
-                        prefixIcon: SvgPicture.asset(Assets.iconsLock),
+                        prefixIcon: SvgPicture.asset(Assets.iconsAuthLock),
                         kbType: TextInputType.visiblePassword,
                         validate: (value) {
                           return ValidationErrorTexts.loginPasswordValidation(

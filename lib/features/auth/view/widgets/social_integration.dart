@@ -53,15 +53,15 @@ class SocialIntegration extends StatelessWidget {
             children: [
               PlatformCard(
                 integrateWith: integrateWithGoogle,
-                platformIcon: Assets.iconsGoogle,
+                platformIcon: Assets.iconsAuthGoogle,
               ),
               PlatformCard(
                 integrateWith: integrateWithFacebook,
-                platformIcon: Assets.iconsFacbookFilledBlue,
+                platformIcon: Assets.iconsAuthFacbookFilledBlue,
               ),
               PlatformCard(
                 integrateWith: integrateWithInsta,
-                platformIcon: Assets.iconsInstaColored,
+                platformIcon: Assets.iconsAuthInstaColored,
               ),
             ],
           ),

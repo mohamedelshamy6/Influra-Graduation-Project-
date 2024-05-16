@@ -75,18 +75,19 @@ class HelperMethods {
 
   static void svgPrecacheImage() {
     const cacheSvgImages = [
-      Assets.iconsBusiness,
-      Assets.iconsEmail,
-      Assets.iconsFacbookFilledBlue,
-      Assets.iconsFacebook,
-      Assets.iconsGoogle,
-      Assets.iconsInsta,
-      Assets.iconsInstaColored,
-      Assets.iconsLock,
-      Assets.iconsPerson,
-      Assets.iconsTwitter,
-      Assets.iconsYoutube,
+      Assets.iconsAuthBusiness,
+      Assets.iconsAuthEmail,
+      Assets.iconsAuthFacbookFilledBlue,
+      Assets.iconsAuthFacebook,
+      Assets.iconsAuthGoogle,
+      Assets.iconsAuthInsta,
+      Assets.iconsAuthInstaColored,
+      Assets.iconsAuthLock,
+      Assets.iconsAuthPerson,
+      Assets.iconsAuthTwitter,
+      Assets.iconsAuthYoutube,
       Assets.svgsInflura,
+      Assets.svgsInfluraWhite,
       Assets.svgsDone,
     ];
 

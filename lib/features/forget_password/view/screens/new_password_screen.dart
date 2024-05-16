@@ -37,7 +37,7 @@ class NewPasswordScreen extends StatelessWidget {
                   ),
                   SizedBox(height: 98.h),
                   CustomTFF(
-                    prefixIcon: SvgPicture.asset(Assets.iconsLock),
+                    prefixIcon: SvgPicture.asset(Assets.iconsAuthLock),
                     hintText: 'New Password',
                     kbType: TextInputType.visiblePassword,
                     validate: (value) {
@@ -47,7 +47,7 @@ class NewPasswordScreen extends StatelessWidget {
                   ),
                   SizedBox(height: 32.h),
                   CustomTFF(
-                    prefixIcon: SvgPicture.asset(Assets.iconsLock),
+                    prefixIcon: SvgPicture.asset(Assets.iconsAuthLock),
                     hintText: 'Confirm New Password',
                     kbType: TextInputType.visiblePassword,
                     validate: (value) {
