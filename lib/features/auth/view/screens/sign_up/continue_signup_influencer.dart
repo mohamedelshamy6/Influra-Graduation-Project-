@@ -44,7 +44,7 @@ class ContinueSignUpInfluencer extends StatelessWidget {
                   SizedBox(height: 32.h),
                   CustomTFF(
                     hintText: 'Link for Facebook ',
-                    prefixIcon: SvgPicture.asset(Assets.iconsFacebook),
+                    prefixIcon: SvgPicture.asset(Assets.iconsAuthFacebook),
                     kbType: TextInputType.url,
                     validate: (value) {
                       return ValidationErrorTexts.urlValidation(value);
@@ -53,7 +53,7 @@ class ContinueSignUpInfluencer extends StatelessWidget {
                   SizedBox(height: 32.h),
                   CustomTFF(
                     hintText: 'Link for Instagram ',
-                    prefixIcon: SvgPicture.asset(Assets.iconsInsta),
+                    prefixIcon: SvgPicture.asset(Assets.iconsAuthInsta),
                     kbType: TextInputType.url,
                     validate: (value) {
                       return ValidationErrorTexts.urlValidation(value);
@@ -62,7 +62,7 @@ class ContinueSignUpInfluencer extends StatelessWidget {
                   SizedBox(height: 32.h),
                   CustomTFF(
                     hintText: 'Link for Youtube',
-                    prefixIcon: SvgPicture.asset(Assets.iconsYoutube),
+                    prefixIcon: SvgPicture.asset(Assets.iconsAuthYoutube),
                     kbType: TextInputType.url,
                     validate: (value) {
                       return ValidationErrorTexts.urlValidation(value);
@@ -71,7 +71,7 @@ class ContinueSignUpInfluencer extends StatelessWidget {
                   SizedBox(height: 32.h),
                   CustomTFF(
                     hintText: 'Link for X ',
-                    prefixIcon: SvgPicture.asset(Assets.iconsTwitter),
+                    prefixIcon: SvgPicture.asset(Assets.iconsAuthTwitter),
                     kbType: TextInputType.url,
                     validate: (value) {
                       return ValidationErrorTexts.urlValidation(value);

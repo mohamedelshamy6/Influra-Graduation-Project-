@@ -5,6 +5,7 @@ import 'package:influra/features/forget_password/view/screens/forget_password_sc
 import 'package:influra/features/forget_password/view/screens/new_password_screen.dart';
 import 'package:influra/features/forget_password/view/screens/reset_password_screen.dart';
 import 'package:influra/features/forget_password/view/screens/verification_code_screen.dart';
+import 'package:influra/core/widgets/bot_nav_bar.dart';
 import 'routes.dart';
 import '../../features/auth/view/screens/login/login.dart';
 import '../../features/auth/view/screens/sign_up/continue_signup_influencer.dart';
@@ -59,6 +60,10 @@ class AppRoutes {
       case Routes.verificationCode:
         return MaterialPageRoute(
           builder: (context) => const VerificationCodeScreen(),
+        );
+      case Routes.botNavbar:
+        return MaterialPageRoute(
+          builder: (context) => const BottomNavBar(),
         );
       case Routes.newPassword:
         return MaterialPageRoute(
