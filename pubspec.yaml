@@ -69,6 +69,7 @@ flutter:
 
   assets:
     - assets/images/
+    - assets/images/influencers/
     - assets/svgs/
     - assets/icons/
     - assets/icons/auth/
