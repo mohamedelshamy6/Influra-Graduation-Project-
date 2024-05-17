@@ -101,6 +101,36 @@ class Assets {
   static const String imagesIconLauncherBackground =
       "assets/images/icon_launcher_background.png";
 
+  /// Assets for imagesInfluencersElwakil
+  /// assets/images/influencers/elwakil.png
+  static const String imagesInfluencersElwakil =
+      "assets/images/influencers/elwakil.png";
+
+  /// Assets for imagesInfluencersMarzouqi
+  /// assets/images/influencers/marzouqi.png
+  static const String imagesInfluencersMarzouqi =
+      "assets/images/influencers/marzouqi.png";
+
+  /// Assets for imagesInfluencersMon3sh
+  /// assets/images/influencers/mon3sh.png
+  static const String imagesInfluencersMon3sh =
+      "assets/images/influencers/mon3sh.png";
+
+  /// Assets for imagesInfluencersNso7i
+  /// assets/images/influencers/nso7i.png
+  static const String imagesInfluencersNso7i =
+      "assets/images/influencers/nso7i.png";
+
+  /// Assets for imagesInfluencersS7s
+  /// assets/images/influencers/s7s.png
+  static const String imagesInfluencersS7s =
+      "assets/images/influencers/s7s.png";
+
+  /// Assets for imagesInfluencersSrry
+  /// assets/images/influencers/srry.png
+  static const String imagesInfluencersSrry =
+      "assets/images/influencers/srry.png";
+
   /// Assets for svgsDone
   /// assets/svgs/done.svg
   static const String svgsDone = "assets/svgs/done.svg";

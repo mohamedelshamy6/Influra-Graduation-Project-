@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:influra/features/favourites/view/screens/favourites_screen.dart';
+import 'package:influra/features/search/view/screens/search_screen.dart';
 import 'package:influra/features/settings/view/screens/settings.dart';
 import '../theme/app_colors.dart';
 import '../theme/app_text_styles.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+
+import '../../../../core/helpers/app_images.dart';
 
 class BottomNavBar extends StatefulWidget {
   const BottomNavBar({super.key});
@@ -18,16 +23,8 @@ List pages = [
       child: Text('one'),
     ),
   ),
-  const Scaffold(
-    body: Center(
-      child: Text('two'),
-    ),
-  ),
-  const Scaffold(
-    body: Center(
-      child: Text('three'),
-    ),
-  ),
+  const SearchScreen(),
+  const FavouritesScreen(),
   const SettingsScreen(),
 ];
 
@@ -41,6 +38,13 @@ class _BottomNavBarState extends State<BottomNavBar> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: AppColors.mainBlue,
+        centerTitle: true,
+        title: SvgPicture.asset(
+          Assets.svgsInfluraWhite,
+        ),
+      ),
       extendBody: true,
       body: pages[selectedIndex],
       bottomNavigationBar: Container(

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:influra/core/helpers/app_images.dart';
 import 'package:influra/core/theme/app_colors.dart';
 
@@ -33,28 +32,19 @@ class SettingsScreen extends StatelessWidget {
       "Request",
       "Logout",
     ];
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: AppColors.mainBlue,
-        centerTitle: true,
-        title: SvgPicture.asset(
-          Assets.svgsInfluraWhite,
-        ),
-      ),
-      body: SafeArea(
-        child: Padding(
-          padding: EdgeInsets.only(top: 32.h, right: 32.w, left: 32.w),
-          child: ListView.separated(
-            itemBuilder: (context, index) => SettingsBody(
-              settingsIcon: settingsIcons[index],
-              settingsTitle: settingsTitle[index],
-              onTap: () {},
-            ),
-            separatorBuilder: (context, index) => const Divider(
-              color: AppColors.mainBlue,
-            ),
-            itemCount: settingsIcons.length,
+    return SafeArea(
+      child: Padding(
+        padding: EdgeInsets.only(top: 32.h, right: 32.w, left: 32.w),
+        child: ListView.separated(
+          itemBuilder: (context, index) => SettingsBody(
+            settingsIcon: settingsIcons[index],
+            settingsTitle: settingsTitle[index],
+            onTap: () {},
           ),
+          separatorBuilder: (context, index) => const Divider(
+            color: AppColors.mainBlue,
+          ),
+          itemCount: settingsIcons.length,
         ),
       ),
     );
