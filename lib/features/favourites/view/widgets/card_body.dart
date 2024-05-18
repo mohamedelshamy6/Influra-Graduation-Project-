@@ -7,9 +7,13 @@ class CardBody extends StatelessWidget {
   const CardBody({
     super.key,
     required this.influenersImages,
+    required this.name,
+    required this.category,
   });
 
   final String influenersImages;
+  final String name;
+  final String category;
 
   @override
   Widget build(BuildContext context) {
@@ -33,11 +37,11 @@ class CardBody extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                'Lorem ipsum Lorem',
+                name,
                 style: AppTextStyles.poppinsSemiBold16Black,
               ),
               Text(
-                'Lorem ipsum',
+                category,
                 style: AppTextStyles.poppinsMedium14Black,
               ),
               const Spacer(),

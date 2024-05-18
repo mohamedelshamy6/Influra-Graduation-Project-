@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import '../../../../core/helpers/app_constants.dart';
 
-import '../../../../core/helpers/app_images.dart';
 import '../../../../core/theme/app_colors.dart';
 import '../../../../core/theme/app_text_styles.dart';
 import 'search_suggestions.dart';
@@ -13,31 +13,6 @@ class SearchBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    List<String> influenersImages = [
-      Assets.imagesInfluencersElwakil,
-      Assets.imagesInfluencersSrry,
-      Assets.imagesInfluencersS7s,
-      Assets.imagesInfluencersMon3sh,
-      Assets.imagesInfluencersNso7i,
-      Assets.imagesInfluencersMarzouqi,
-    ];
-    List<String> influenersNames = [
-      'Ahmed El Wakil',
-      'Marwan Serry',
-      'S7S',
-      'mon3esh',
-      'Amr Nasohi',
-      'Muhammad Marzouqi',
-    ];
-    List<String> influenersCategories = [
-      'Car',
-      'Football',
-      'Food',
-      'Food',
-      'Football',
-      'Car',
-    ];
-
     return ListView.separated(
       itemBuilder: (context, index) => Padding(
         padding: EdgeInsets.symmetric(vertical: 4.h),
@@ -51,9 +26,9 @@ class SearchBody extends StatelessWidget {
               overlayColor: const MaterialStatePropertyAll(Colors.transparent),
               splashColor: Colors.transparent,
               child: SearchSugg(
-                name: influenersNames[index],
-                image: influenersImages[index],
-                category: influenersCategories[index],
+                name: AppConstants.influenersNames[index],
+                image: AppConstants.influenersImages[index],
+                category: AppConstants.influenersCategories[index],
               ),
             ),
             Padding(

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:influra/core/errors/messages/validation_error_messages.dart';
+import '../../../../../core/errors/messages/validation_error_messages.dart';
 import '../../../../../core/helpers/app_images.dart';
 import '../../../../../core/widgets/custom_text_form_field.dart';
 import '../../widgets/already_have_account.dart';

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:influra/core/widgets/custom_text_form_field.dart';
+import '../../../../core/widgets/custom_text_form_field.dart';
 
 import '../widgets/search_body.dart';
 

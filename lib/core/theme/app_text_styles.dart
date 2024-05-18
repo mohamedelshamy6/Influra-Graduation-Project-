@@ -61,9 +61,24 @@ class AppTextStyles {
     fontSize: 16.sp,
     fontWeight: FontWeight.w600,
   );
+  static TextStyle poppinsSemiBold20Blue = GoogleFonts.poppins(
+    color: AppColors.mainBlue,
+    fontSize: 20.sp,
+    fontWeight: FontWeight.w600,
+  );
+  static TextStyle poppinsSemiBold30Blue = GoogleFonts.poppins(
+    color: AppColors.mainBlue,
+    fontSize: 30.sp,
+    fontWeight: FontWeight.w600,
+  );
   static TextStyle poppinsMedium14Black = GoogleFonts.poppins(
     color: Colors.black,
     fontSize: 14.sp,
+    fontWeight: FontWeight.w500,
+  );
+  static TextStyle poppinsMedium16Blue = GoogleFonts.poppins(
+    color: AppColors.mainBlue,
+    fontSize: 16.sp,
     fontWeight: FontWeight.w500,
   );
 }
