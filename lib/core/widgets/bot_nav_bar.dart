@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:influra/features/favourites/view/screens/favourites_screen.dart';
-import 'package:influra/features/search/view/screens/search_screen.dart';
-import 'package:influra/features/settings/view/screens/settings.dart';
+import '../../features/favourites/view/screens/favourites_screen.dart';
+import '../../features/search/view/screens/search_screen.dart';
+import '../../features/settings/view/screens/settings.dart';
+import '../../features/home/view/screens/home_screen.dart';
 import '../theme/app_colors.dart';
 import '../theme/app_text_styles.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -18,11 +19,7 @@ class BottomNavBar extends StatefulWidget {
 
 int selectedIndex = 0;
 List pages = [
-  const Scaffold(
-    body: Center(
-      child: Text('one'),
-    ),
-  ),
+  const HomeScreen(),
   const SearchScreen(),
   const FavouritesScreen(),
   const SettingsScreen(),

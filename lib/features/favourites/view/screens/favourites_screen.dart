@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:influra/core/helpers/app_images.dart';
-import 'package:influra/core/theme/app_colors.dart';
+import '../../../../core/theme/app_colors.dart';
 
+import '../../../../core/helpers/app_constants.dart';
 import '../widgets/card_body.dart';
 
 class FavouritesScreen extends StatelessWidget {
@@ -10,14 +10,6 @@ class FavouritesScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    List<String> influenersImages = [
-      Assets.imagesInfluencersElwakil,
-      Assets.imagesInfluencersSrry,
-      Assets.imagesInfluencersS7s,
-      Assets.imagesInfluencersMon3sh,
-      Assets.imagesInfluencersNso7i,
-      Assets.imagesInfluencersMarzouqi,
-    ];
     return SafeArea(
       child: Padding(
         padding:
@@ -37,7 +29,9 @@ class FavouritesScreen extends StatelessWidget {
                     borderRadius: BorderRadius.circular(20),
                   ),
                   child: CardBody(
-                    influenersImages: influenersImages[index],
+                    influenersImages: AppConstants.influenersImages[index],
+                    category: AppConstants.influenersCategories[index],
+                    name: AppConstants.influenersNames[index],
                   ),
                 ),
                 Positioned(
