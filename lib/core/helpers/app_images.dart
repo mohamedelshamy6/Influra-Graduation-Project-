@@ -96,10 +96,69 @@ class Assets {
   /// assets/icons/settings/person.png
   static const String iconsSettingsPerson = "assets/icons/settings/person.png";
 
+  /// Assets for imagesCategoriesArts
+  /// assets/images/categories/arts.png
+  static const String imagesCategoriesArts =
+      "assets/images/categories/arts.png";
+
+  /// Assets for imagesCategoriesCar
+  /// assets/images/categories/car.png
+  static const String imagesCategoriesCar = "assets/images/categories/car.png";
+
+  /// Assets for imagesCategoriesElectronics
+  /// assets/images/categories/electronics.png
+  static const String imagesCategoriesElectronics =
+      "assets/images/categories/electronics.png";
+
+  /// Assets for imagesCategoriesFashion
+  /// assets/images/categories/fashion.png
+  static const String imagesCategoriesFashion =
+      "assets/images/categories/fashion.png";
+
+  /// Assets for imagesCategoriesFood
+  /// assets/images/categories/food.png
+  static const String imagesCategoriesFood =
+      "assets/images/categories/food.png";
+
+  /// Assets for imagesCategoriesSports
+  /// assets/images/categories/sports.png
+  static const String imagesCategoriesSports =
+      "assets/images/categories/sports.png";
+
   /// Assets for imagesIconLauncherBackground
   /// assets/images/icon_launcher_background.png
   static const String imagesIconLauncherBackground =
       "assets/images/icon_launcher_background.png";
+
+  /// Assets for imagesInfluencersElwakil
+  /// assets/images/influencers/elwakil.png
+  static const String imagesInfluencersElwakil =
+      "assets/images/influencers/elwakil.png";
+
+  /// Assets for imagesInfluencersMarzouqi
+  /// assets/images/influencers/marzouqi.png
+  static const String imagesInfluencersMarzouqi =
+      "assets/images/influencers/marzouqi.png";
+
+  /// Assets for imagesInfluencersMon3sh
+  /// assets/images/influencers/mon3sh.png
+  static const String imagesInfluencersMon3sh =
+      "assets/images/influencers/mon3sh.png";
+
+  /// Assets for imagesInfluencersNso7i
+  /// assets/images/influencers/nso7i.png
+  static const String imagesInfluencersNso7i =
+      "assets/images/influencers/nso7i.png";
+
+  /// Assets for imagesInfluencersS7s
+  /// assets/images/influencers/s7s.png
+  static const String imagesInfluencersS7s =
+      "assets/images/influencers/s7s.png";
+
+  /// Assets for imagesInfluencersSrry
+  /// assets/images/influencers/srry.png
+  static const String imagesInfluencersSrry =
+      "assets/images/influencers/srry.png";
 
   /// Assets for svgsDone
   /// assets/svgs/done.svg

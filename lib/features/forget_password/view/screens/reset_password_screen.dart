@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:influra/core/errors/messages/validation_error_messages.dart';
-import 'package:influra/core/routing/routes.dart';
-import 'package:influra/core/theme/app_colors.dart';
-import 'package:influra/core/widgets/custom_text_form_field.dart';
-import 'package:influra/features/forget_password/logic/cubit/forget_password_cubit.dart';
+import '../../../../core/errors/messages/validation_error_messages.dart';
+import '../../../../core/routing/routes.dart';
+import '../../../../core/theme/app_colors.dart';
+import '../../../../core/widgets/custom_text_form_field.dart';
+import '../../logic/cubit/forget_password_cubit.dart';
 
 import '../../../../core/theme/app_text_styles.dart';
 import '../../../../core/widgets/custom_button.dart';

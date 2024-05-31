@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:influra/features/forget_password/logic/cubit/forget_password_cubit.dart';
-import 'package:influra/features/forget_password/view/screens/forget_password_screen.dart';
-import 'package:influra/features/forget_password/view/screens/new_password_screen.dart';
-import 'package:influra/features/forget_password/view/screens/reset_password_screen.dart';
-import 'package:influra/features/forget_password/view/screens/verification_code_screen.dart';
-import 'package:influra/core/widgets/bot_nav_bar.dart';
+import '../../features/forget_password/logic/cubit/forget_password_cubit.dart';
+import '../../features/forget_password/view/screens/forget_password_screen.dart';
+import '../../features/forget_password/view/screens/new_password_screen.dart';
+import '../../features/forget_password/view/screens/reset_password_screen.dart';
+import '../../features/forget_password/view/screens/verification_code_screen.dart';
+import '../widgets/bot_nav_bar.dart';
+import '../../features/home/view/screens/categories_screen.dart';
+import '../../features/home/view/screens/influencers_screen.dart';
 import 'routes.dart';
 import '../../features/auth/view/screens/login/login.dart';
 import '../../features/auth/view/screens/sign_up/continue_signup_influencer.dart';
@@ -68,6 +70,21 @@ class AppRoutes {
       case Routes.newPassword:
         return MaterialPageRoute(
           builder: (context) => const NewPasswordScreen(),
+        );
+      case Routes.categories:
+        return MaterialPageRoute(
+          builder: (context) => CategoriesScreen(
+            categories: (args as List<List<String>>)[0],
+            categoriesImages: (args)[1],
+          ),
+        );
+      case Routes.influencers:
+        return MaterialPageRoute(
+          builder: (context) => InfluencersScreen(
+            category: (args as List<List<String>>)[2],
+            image: (args)[1],
+            name: (args)[0],
+          ),
         );
     }
     return null;

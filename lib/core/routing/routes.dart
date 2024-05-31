@@ -9,4 +9,6 @@ class Routes {
   static const String verificationCode = 'verificationCode';
   static const String newPassword = 'newPassword';
   static const String botNavbar = 'botNavbar';
+  static const String categories= 'categories';
+  static const String influencers= 'influencers';
 }

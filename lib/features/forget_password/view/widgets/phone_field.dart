@@ -3,7 +3,7 @@ import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:influra/features/forget_password/logic/cubit/forget_password_cubit.dart';
+import '../../logic/cubit/forget_password_cubit.dart';
 import 'package:intl_phone_field/intl_phone_field.dart';
 
 import '../../../../core/theme/app_colors.dart';

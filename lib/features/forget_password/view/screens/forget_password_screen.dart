@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:influra/core/routing/routes.dart';
-import 'package:influra/core/theme/app_text_styles.dart';
-import 'package:influra/core/widgets/custom_button.dart';
-import 'package:influra/features/forget_password/view/widgets/contact_detalis.dart';
+import '../../../../core/routing/routes.dart';
+import '../../../../core/theme/app_text_styles.dart';
+import '../../../../core/widgets/custom_button.dart';
+import '../widgets/contact_detalis.dart';
 
 class ForgotPasswordScreen extends StatefulWidget {
   const ForgotPasswordScreen({super.key});

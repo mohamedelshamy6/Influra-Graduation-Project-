@@ -3,7 +3,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:influra/core/helpers/app_images.dart';
+import 'app_images.dart';
 
 import '../routing/routes.dart';
 import '../theme/app_text_styles.dart';
