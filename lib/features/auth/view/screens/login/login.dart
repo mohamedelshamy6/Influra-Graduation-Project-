@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import '../../../../../core/errors/messages/validation_error_messages.dart';
 import '../../../../../core/routing/routes.dart';
+import '../../../../../core/widgets/influencer_nav_screen.dart';
 import '../../widgets/social_integration.dart';
 
 import '../../../../../core/helpers/app_images.dart';
@@ -23,11 +24,7 @@ class LoginScreen extends StatelessWidget {
       appBar: AppBar(),
       body: SafeArea(
         child: Padding(
-          padding: EdgeInsets.only(
-            left: 24.w,
-            right: 24.w,
-            bottom: 16.h,
-          ),
+          padding: EdgeInsets.only(left: 24.w, right: 24.w, bottom: 16.h,),
           child: Form(
             key: formKey,
             child: SingleChildScrollView(
@@ -72,11 +69,15 @@ class LoginScreen extends StatelessWidget {
                   Align(
                     alignment: Alignment.centerRight,
                     child: TextButton(
-                      style: const ButtonStyle(
-                        overlayColor:
-                            MaterialStatePropertyAll(Colors.transparent),
-                        splashFactory: NoSplash.splashFactory,
+                      style: TextButton.styleFrom(
+                        foregroundColor: Colors.transparent,
+                        overlayColor: Colors.transparent
                       ),
+                      // style: const ButtonStyle(
+                      //   overlayColor:
+                      //       MaterialStatePropertyAll(Colors.transparent),
+                      //   splashFactory: NoSplash.splashFactory,
+                      // ),
                       onPressed: () {
                         Navigator.pushNamed(context, Routes.forgotPassword);
                       },
@@ -93,7 +94,10 @@ class LoginScreen extends StatelessWidget {
                   CustomButton(
                     buttonText: 'Sign in',
                     buttonAction: () {
-                      if (formKey.currentState!.validate()) {}
+                      if (formKey.currentState!.validate()) {
+                        // Navigator.pushNamed(context, Routes.botNavbar);
+                        Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (context)=>InfluencerNavScreen()), (route)=>false);
+                      }
                     },
                     buttonStyle: AppTextStyles.poppinsBold15White,
                   ),

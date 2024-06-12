@@ -26,7 +26,7 @@ dependencies:
   shared_preferences: ^2.2.2
   #Theming and gifs.
   font_awesome_flutter: ^10.7.0
-  lottie: ^3.0.0
+#  lottie: ^3.0.0
   google_fonts: ^6.1.0
   #Image handling.
   flutter_svg: ^2.0.9

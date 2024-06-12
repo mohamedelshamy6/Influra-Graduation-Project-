@@ -61,7 +61,8 @@ class _CustomTFFState extends State<CustomTFF> {
             },
         controller: widget.controller,
         decoration: InputDecoration(
-          hintFadeDuration: const Duration(milliseconds: 100),
+
+          // hintFadeDuration: const Duration(milliseconds: 100),
           prefixIcon: Padding(
             padding: EdgeInsets.all(16.r),
             child: widget.prefixIcon,

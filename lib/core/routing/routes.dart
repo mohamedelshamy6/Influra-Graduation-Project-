@@ -11,4 +11,5 @@ class Routes {
   static const String botNavbar = 'botNavbar';
   static const String categories= 'categories';
   static const String influencers= 'influencers';
+  static const String influencerAccount= 'influencerAccount';
 }
