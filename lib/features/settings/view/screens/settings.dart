@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:influra/core/routing/routes.dart';
 import '../../../../core/helpers/app_images.dart';
 import '../../../../core/theme/app_colors.dart';
 
@@ -39,7 +40,29 @@ class SettingsScreen extends StatelessWidget {
           itemBuilder: (context, index) => SettingsBody(
             settingsIcon: settingsIcons[index],
             settingsTitle: settingsTitle[index],
-            onTap: () {},
+            onTap: () {
+              if (settingsTitle[index].contains('Language')) {
+                Navigator.of(context).pushNamed(Routes.language);
+              }
+              if (settingsTitle[index].contains('Notifications')) {
+                Navigator.of(context).pushNamed(Routes.notifications);
+              }
+              if (settingsTitle[index].contains('Policy')) {
+                Navigator.of(context).pushNamed(Routes.privacyPolicy);
+              }
+              if (settingsTitle[index].contains('Terms')) {
+                Navigator.of(context).pushNamed(Routes.terms);
+              }
+              if (settingsTitle[index].contains('Chat')) {
+                Navigator.of(context).pushNamed(Routes.startChatBot);
+              }
+              if (settingsTitle[index].contains('Profile')) {
+                Navigator.of(context).pushNamed(Routes.ownerProfile);
+              }
+              if (settingsTitle[index].contains('Request')) {
+                Navigator.of(context).pushNamed(Routes.requests);
+              }
+            },
           ),
           separatorBuilder: (context, index) => const Divider(
             color: AppColors.mainBlue,

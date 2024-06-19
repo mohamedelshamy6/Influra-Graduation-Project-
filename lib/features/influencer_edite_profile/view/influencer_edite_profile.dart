@@ -6,6 +6,6 @@ class InfluencerEditeProfile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return EditeProfileBody();
+    return const EditeProfileBody();
   }
 }

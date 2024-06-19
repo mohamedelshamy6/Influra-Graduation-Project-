@@ -22,7 +22,7 @@ class SettingsBody extends StatelessWidget {
       onTap: onTap,
       highlightColor: Colors.transparent,
       hoverColor: Colors.transparent,
-      overlayColor: const MaterialStatePropertyAll(Colors.transparent),
+      overlayColor: const WidgetStatePropertyAll(Colors.transparent),
       splashColor: Colors.transparent,
       child: Padding(
         padding: EdgeInsets.symmetric(horizontal: 8.w, vertical: 16.h),

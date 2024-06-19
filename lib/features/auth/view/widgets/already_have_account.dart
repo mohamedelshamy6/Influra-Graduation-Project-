@@ -17,8 +17,8 @@ class AlreadyHaveAccount extends StatelessWidget {
         ),
         TextButton(
           style: const ButtonStyle(
-            padding: MaterialStatePropertyAll(EdgeInsets.zero),
-            overlayColor: MaterialStatePropertyAll(Colors.transparent),
+            padding: WidgetStatePropertyAll(EdgeInsets.zero),
+            overlayColor: WidgetStatePropertyAll(Colors.transparent),
             splashFactory: NoSplash.splashFactory,
           ),
           onPressed: () => Navigator.pushNamed(

@@ -21,9 +21,9 @@ class AccountDropDownField extends StatelessWidget {
               ),
             ),
             items: const [
-              DropdownMenuItem(child: Text('data 1'),value: 1,),
-              DropdownMenuItem(child: Text('data 2'),value: 2,),
-            ], onChanged: (x){print(x);}),
+              DropdownMenuItem(value: 1,child: Text('data 1'),),
+              DropdownMenuItem(value: 2,child: Text('data 2'),),
+            ], onChanged: (x){}),
       ],
     );
   }

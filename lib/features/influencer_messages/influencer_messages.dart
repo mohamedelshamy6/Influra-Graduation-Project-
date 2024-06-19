@@ -6,6 +6,6 @@ class InfluencerMessages extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return InfluencerMessagesBody();
+    return const InfluencerMessagesBody();
   }
 }

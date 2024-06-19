@@ -7,16 +7,16 @@ import 'package:influra/features/influencer_edite_profile/view/widgets/account_t
 
 import '../../../../core/theme/app_text_styles.dart';
 
-class EditeProfileBody extends StatelessWidget {
-  const EditeProfileBody({Key? key}) : super(key: key);
+class EditOwnerProfile extends StatelessWidget {
+  const EditOwnerProfile({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          'Account',
-          style: AppTextStyles.poppinsSemiBold20Blue,
+          'Profile',
+          style: AppTextStyles.poppinsSemiBold30Blue,
         ),
         centerTitle: true,
       ),
@@ -31,10 +31,13 @@ class EditeProfileBody extends StatelessWidget {
               alignment: Alignment.center,
               children: [
                 CircleAvatar(
+                  backgroundColor: AppColors.homeCategoryCardsColor,
                   radius: 80,
-                  backgroundImage: const NetworkImage(
-                      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2go3DY4UlFzbibP4SBwU8I10f99YF6d6bYccj-OpLeEj_-9cNqCX-WuTZvFYLDzKmP7M&usqp=CAU'),
-                  onBackgroundImageError: (x, y) => const Text('No Images'),
+                  child: Icon(
+                    Icons.person,
+                    size: 80.r,
+                    color: AppColors.mainBlue,
+                  ),
                 ),
                 const PositionedDirectional(
                     bottom: 0,

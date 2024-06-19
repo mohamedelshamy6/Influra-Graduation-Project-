@@ -23,7 +23,7 @@ class SearchBody extends StatelessWidget {
               onTap: () {},
               highlightColor: Colors.transparent,
               hoverColor: Colors.transparent,
-              overlayColor: const MaterialStatePropertyAll(Colors.transparent),
+              overlayColor: const WidgetStatePropertyAll(Colors.transparent),
               splashColor: Colors.transparent,
               child: SearchSugg(
                 name: AppConstants.influenersNames[index],

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:influra/core/theme/app_colors.dart';
+import 'package:influra/features/home/view/screens/influencer_details.dart';
 
 import '../../../../core/helpers/app_constants.dart';
 import '../../../../core/routing/routes.dart';
@@ -91,7 +92,15 @@ class HomeScreen extends StatelessWidget {
                       'Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum',
                   image: AppConstants.influenersImages[index],
                   name: AppConstants.influenersNames[index],
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => InfluencerDetails(
+                        category: AppConstants.influenersCategories[index],
+                        image: AppConstants.influenersImages[index],
+                        name: AppConstants.influenersNames[index],
+                      ),
+                    ));
+                  },
                 ),
                 itemCount: 6,
               ),

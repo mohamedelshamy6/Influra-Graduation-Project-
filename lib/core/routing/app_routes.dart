@@ -1,5 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:influra/features/chat_bot/views/screens/chat_screen.dart';
+import 'package:influra/features/chat_bot/views/screens/start_chat_bot.dart';
+import 'package:influra/features/influencer_account/influencer_account.dart';
+import 'package:influra/features/settings/view/screens/language.dart';
+import 'package:influra/features/settings/view/screens/notification.dart';
+import 'package:influra/features/settings/view/screens/owner_profile.dart';
+import 'package:influra/features/settings/view/screens/privacy_policy.dart';
+import 'package:influra/features/settings/view/screens/requests.dart';
+import 'package:influra/features/settings/view/screens/terms.dart';
 import '../../features/forget_password/logic/cubit/forget_password_cubit.dart';
 import '../../features/forget_password/view/screens/forget_password_screen.dart';
 import '../../features/forget_password/view/screens/new_password_screen.dart';
@@ -70,6 +79,42 @@ class AppRoutes {
       case Routes.newPassword:
         return MaterialPageRoute(
           builder: (context) => const NewPasswordScreen(),
+        );
+      case Routes.language:
+        return MaterialPageRoute(
+          builder: (context) => const Language(),
+        );
+      case Routes.terms:
+        return MaterialPageRoute(
+          builder: (context) => const Terms(),
+        );
+      case Routes.startChatBot:
+        return MaterialPageRoute(
+          builder: (context) => const StartChatBot(),
+        );
+      case Routes.chatBot:
+        return MaterialPageRoute(
+          builder: (context) => const ChatScreen(),
+        );
+      case Routes.influencerAccount:
+        return MaterialPageRoute(
+          builder: (context) => const InfluencerAccount(),
+        );
+      case Routes.requests:
+        return MaterialPageRoute(
+          builder: (context) => const Requests(),
+        );
+      case Routes.ownerProfile:
+        return MaterialPageRoute(
+          builder: (context) => const OwnerProfile(),
+        );
+      case Routes.privacyPolicy:
+        return MaterialPageRoute(
+          builder: (context) => const PrivacyPolicy(),
+        );
+      case Routes.notifications:
+        return MaterialPageRoute(
+          builder: (context) => const Notifications(),
         );
       case Routes.categories:
         return MaterialPageRoute(

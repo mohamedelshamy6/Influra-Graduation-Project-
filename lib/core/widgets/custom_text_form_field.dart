@@ -61,12 +61,12 @@ class _CustomTFFState extends State<CustomTFF> {
             },
         controller: widget.controller,
         decoration: InputDecoration(
-
-          // hintFadeDuration: const Duration(milliseconds: 100),
-          prefixIcon: Padding(
-            padding: EdgeInsets.all(16.r),
-            child: widget.prefixIcon,
-          ),
+          prefixIcon: widget.prefixIcon == null
+              ? null
+              : Padding(
+                  padding: EdgeInsets.all(16.r),
+                  child: widget.prefixIcon,
+                ),
           suffixIcon: widget.hintText == 'Password' ||
                   widget.hintText == 'New Password' ||
                   widget.hintText == 'Confirm password' ||
@@ -74,7 +74,7 @@ class _CustomTFFState extends State<CustomTFF> {
               ? IconButton(
                   style: const ButtonStyle(
                     splashFactory: NoSplash.splashFactory,
-                    overlayColor: MaterialStatePropertyAll(Colors.transparent),
+                    overlayColor: WidgetStatePropertyAll(Colors.transparent),
                   ),
                   onPressed: () {
                     setState(() {

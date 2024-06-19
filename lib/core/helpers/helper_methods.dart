@@ -99,13 +99,14 @@ class HelperMethods {
     }
   }
 
-  static AppBar influencerAppBar(){
+  static AppBar influencerAppBar() {
     return AppBar(
       centerTitle: true,
       backgroundColor: AppColors.mainBlue,
       leading: const SizedBox(),
       title: SvgPicture.asset(
-        height: 30.h, Assets.svgsInflura, color: Colors.white,
+        height: 30.h,
+        Assets.svgsInfluraWhite,
       ),
     );
   }

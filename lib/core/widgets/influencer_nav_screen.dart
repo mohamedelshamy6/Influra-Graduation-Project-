@@ -17,22 +17,22 @@ class InfluencerNavScreen extends StatefulWidget {
 }
 
 class _InfluencerNavScreenState extends State<InfluencerNavScreen> {
-  List influencerPagesList=[
-    InfluencerHome(),
-    InfluencerSearch(),
-    InfluencerMessages(),
-    InfluencerSettings(),
+  List influencerPagesList = [
+    const InfluencerHome(),
+    const InfluencerSearch(),
+    const InfluencerMessages(),
+    const InfluencerSettings(),
   ];
-  int selectedIndex=0;
+  int selectedIndex = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: HelperMethods.influencerAppBar(),
-      body: influencerPagesList[selectedIndex],
+        appBar: HelperMethods.influencerAppBar(),
+        body: influencerPagesList[selectedIndex],
         // floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
         bottomNavigationBar: Container(
           height: 67.h,
-          margin: EdgeInsets.only(bottom: 20.h,left: 10.w,right: 10.w),
+          margin: EdgeInsets.only(bottom: 20.h, left: 10.w, right: 10.w),
           child: ClipRRect(
             borderRadius: BorderRadius.circular(50.r),
             child: BottomNavigationBar(
@@ -69,13 +69,12 @@ class _InfluencerNavScreenState extends State<InfluencerNavScreen> {
                 fontWeight: FontWeight.w400,
                 fontSize: 12.sp,
               ),
-              onTap: (x){
-                selectedIndex=x;
+              onTap: (x) {
+                selectedIndex = x;
                 setState(() {});
               },
             ),
           ),
-        )
-    );
+        ));
   }
 }
