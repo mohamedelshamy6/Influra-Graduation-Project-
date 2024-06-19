@@ -9,7 +9,7 @@ class CustomButton extends StatelessWidget {
     required this.buttonAction,
     required this.buttonStyle,
     this.height,
-    this.width,
+    this.width, this.backgroundColor=AppColors.mainBlue,
   });
 
   final String buttonText;
@@ -17,6 +17,7 @@ class CustomButton extends StatelessWidget {
   final void Function()? buttonAction;
   final double? height;
   final double? width;
+  final Color? backgroundColor;
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +29,7 @@ class CustomButton extends StatelessWidget {
         disabledTextColor: AppColors.contactDetailsWayUnselectedColor,
         onPressed: buttonAction,
         padding: EdgeInsets.zero,
-        color: AppColors.mainBlue,
+        color: backgroundColor ,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(16.r),
         ),

@@ -45,18 +45,10 @@ class _BottomNavBarState extends State<BottomNavBar> {
       extendBody: true,
       body: pages[selectedIndex],
       bottomNavigationBar: Container(
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.only(
-            topLeft: Radius.circular(25.r),
-            topRight: Radius.circular(25.r),
-          ),
-        ),
         height: 67.h,
+        margin: EdgeInsets.only(bottom: 20.h, left: 10.w, right: 10.w),
         child: ClipRRect(
-          borderRadius: BorderRadius.only(
-            topLeft: Radius.circular(25.r),
-            topRight: Radius.circular(25.r),
-          ),
+          borderRadius: BorderRadius.circular(50.r),
           child: BottomNavigationBar(
             type: BottomNavigationBarType.fixed,
             backgroundColor: AppColors.mainBlue,

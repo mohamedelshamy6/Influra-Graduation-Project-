@@ -125,6 +125,10 @@ class Assets {
   static const String imagesCategoriesSports =
       "assets/images/categories/sports.png";
 
+  /// Assets for imagesChatBot
+  /// assets/images/chat_bot.png
+  static const String imagesChatBot = "assets/images/chat_bot.png";
+
   /// Assets for imagesIconLauncherBackground
   /// assets/images/icon_launcher_background.png
   static const String imagesIconLauncherBackground =
@@ -159,6 +163,10 @@ class Assets {
   /// assets/images/influencers/srry.png
   static const String imagesInfluencersSrry =
       "assets/images/influencers/srry.png";
+
+  /// Assets for imagesRobot
+  /// assets/images/robot.png
+  static const String imagesRobot = "assets/images/robot.png";
 
   /// Assets for svgsDone
   /// assets/svgs/done.svg

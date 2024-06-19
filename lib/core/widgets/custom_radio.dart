@@ -27,7 +27,7 @@ class _CustomRadioState extends State<CustomRadio> {
       padding: EdgeInsets.all(8.r),
       child: InkWell(
         splashFactory: NoSplash.splashFactory,
-        overlayColor: const MaterialStatePropertyAll(Colors.transparent),
+        overlayColor: const WidgetStatePropertyAll(Colors.transparent),
         onTap: () => widget.onChanged(widget.value),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.end,

@@ -25,10 +25,10 @@ class HomeBodyTitle extends StatelessWidget {
           const Spacer(),
           TextButton(
             style: const ButtonStyle(
-              minimumSize: MaterialStatePropertyAll(Size.zero),
-              overlayColor: MaterialStatePropertyAll(Colors.transparent),
+              minimumSize: WidgetStatePropertyAll(Size.zero),
+              overlayColor: WidgetStatePropertyAll(Colors.transparent),
               tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-              padding: MaterialStatePropertyAll(
+              padding: WidgetStatePropertyAll(
                 EdgeInsets.zero,
               ),
             ),

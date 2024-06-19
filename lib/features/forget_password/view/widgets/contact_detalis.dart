@@ -27,7 +27,7 @@ class ContactDetails extends StatelessWidget {
 
     return InkWell(
       splashFactory: NoSplash.splashFactory,
-      overlayColor: const MaterialStatePropertyAll(Colors.transparent),
+      overlayColor: const WidgetStatePropertyAll(Colors.transparent),
       onTap: () {
         onChanged(value);
       },
