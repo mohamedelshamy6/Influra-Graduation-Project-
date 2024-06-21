@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import '../../../../../core/errors/messages/validation_error_messages.dart';
 import '../../../../../core/helpers/app_images.dart';
 import '../../../../../core/widgets/custom_text_form_field.dart';
 import '../../widgets/already_have_account.dart';
@@ -41,6 +42,9 @@ class SignUpBusinessOwner extends StatelessWidget {
                   hintText: 'Full name',
                   prefixIcon: SvgPicture.asset(Assets.iconsAuthPerson),
                   kbType: TextInputType.name,
+                  validate: (value) {
+                    return ValidationErrorTexts.fullNameValidation(value);
+                  },
                 ),
                 SizedBox(height: 32.h),
                 Hero(
@@ -50,6 +54,9 @@ class SignUpBusinessOwner extends StatelessWidget {
                       hintText: 'Email',
                       prefixIcon: SvgPicture.asset(Assets.iconsAuthEmail),
                       kbType: TextInputType.emailAddress,
+                      validate: (value) {
+                        return ValidationErrorTexts.emailValidation(value);
+                      },
                     ),
                   ),
                 ),
@@ -58,6 +65,9 @@ class SignUpBusinessOwner extends StatelessWidget {
                   hintText: 'Business type',
                   prefixIcon: SvgPicture.asset(Assets.iconsAuthBusiness),
                   kbType: TextInputType.text,
+                  validate: (value) {
+                    return ValidationErrorTexts.fullNameValidation(value);
+                  },
                 ),
                 SizedBox(height: 32.h),
                 Hero(
@@ -67,6 +77,10 @@ class SignUpBusinessOwner extends StatelessWidget {
                       hintText: 'Password',
                       prefixIcon: SvgPicture.asset(Assets.iconsAuthLock),
                       kbType: TextInputType.visiblePassword,
+                      validate: (value) {
+                        return ValidationErrorTexts.signUpPasswordValidation(
+                            value);
+                      },
                     ),
                   ),
                 ),
@@ -75,6 +89,10 @@ class SignUpBusinessOwner extends StatelessWidget {
                   hintText: 'Confirm password',
                   prefixIcon: SvgPicture.asset(Assets.iconsAuthLock),
                   kbType: TextInputType.visiblePassword,
+                  validate: (value) {
+                    return ValidationErrorTexts.confirmPasswordValidation(
+                        value, value);
+                  },
                 ),
                 SizedBox(height: 32.h),
                 Hero(
