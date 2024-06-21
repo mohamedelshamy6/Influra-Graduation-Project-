@@ -61,6 +61,20 @@ class InfluencerDetails extends StatelessWidget {
             ),
             const SizedBox(height: 20),
             const LinksContainer(),
+            Expanded(
+              child: GridView.builder(
+                padding: EdgeInsets.symmetric(vertical: 25.h, horizontal: 10.w),
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 2,
+                  crossAxisSpacing: 10,
+                  mainAxisSpacing: 10,
+                ),
+                itemCount: 15,
+                itemBuilder: (context, index) => Image(
+                  image: AssetImage(image),
+                ),
+              ),
+            ),
           ],
         ),
       ),
