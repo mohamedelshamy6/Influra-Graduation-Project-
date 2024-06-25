@@ -46,6 +46,7 @@ dependencies:
   # For ready custom input fields.
   intl_phone_field: ^3.2.0
   pinput: ^4.0.0
+  dartz: ^0.10.1
   
 #changing the application icon.
 flutter_launcher_icons:

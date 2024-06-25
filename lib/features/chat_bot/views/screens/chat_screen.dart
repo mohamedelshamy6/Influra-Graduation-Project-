@@ -1,23 +1,37 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:influra/core/helpers/app_images.dart';
 import 'package:influra/core/widgets/custom_text_form_field.dart';
+import 'package:influra/features/chat_bot/logic/cubit/chatbot_cubit.dart';
 
 import '../../../../core/theme/app_colors.dart';
 import '../../../../core/theme/app_text_styles.dart';
 
-class ChatScreen extends StatelessWidget {
+class ChatScreen extends StatefulWidget {
   const ChatScreen({super.key});
 
   @override
+  State<ChatScreen> createState() => _ChatScreenState();
+}
+
+class _ChatScreenState extends State<ChatScreen> {
+  late ChatbotCubit chatbotCubit;
+  @override
+  void initState() {
+    super.initState();
+    chatbotCubit = BlocProvider.of<ChatbotCubit>(context);
+  }
+
+  @override
+  void dispose() {
+    chatbotCubit.close();
+    chatbotCubit.messageController.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
-    List<String> texts = [
-      'Hello chatGPT,how are you today?',
-      'Hello,i’m fine,how can i help you?',
-      'What is the best programming language?',
-      'There are many programming languages ​​in the market that are used in designing and building websites, various applications and other tasks. All these languages ​​are popular in their place and in the way they are used, and many programmers learn and use them.',
-      'So explain to me more'
-    ];
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
@@ -50,60 +64,124 @@ class ChatScreen extends StatelessWidget {
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(12.0),
-          child: Column(
-            children: [
-              Expanded(
-                child: SingleChildScrollView(
-                  child: Column(
-                    children: List.generate(
-                      5,
-                      (index) => Align(
-                        alignment: index % 2 == 0
-                            ? Alignment.centerRight
-                            : Alignment.centerLeft,
-                        child: Container(
-                          constraints:
-                              BoxConstraints(minWidth: 64.w, maxWidth: 300.w),
-                          padding: const EdgeInsets.all(12.0),
-                          margin: const EdgeInsets.all(8),
-                          decoration: BoxDecoration(
-                            color: index % 2 == 0
-                                ? AppColors.mainBlue
-                                : AppColors.homeCategoryCardsColor,
-                            borderRadius: index % 2 == 0
-                                ? const BorderRadius.only(
-                                    bottomLeft: Radius.circular(25),
-                                    bottomRight: Radius.circular(25),
-                                    topLeft: Radius.circular(25),
-                                  )
-                                : const BorderRadius.only(
-                                    topRight: Radius.circular(25),
-                                    bottomRight: Radius.circular(25),
-                                    topLeft: Radius.circular(25),
-                                  ),
-                          ),
-                          child: Text(
-                            texts[index],
-                            style: index % 2 == 0
-                                ? AppTextStyles.poppinsMedium14Black
-                                    .copyWith(color: Colors.white)
-                                : AppTextStyles.poppinsMedium14Black,
+          child: BlocBuilder<ChatbotCubit, ChatbotState>(
+            buildWhen: (previous, current) => current is MessageAdded,
+            builder: (context, state) {
+              if (chatbotCubit.messages.isEmpty) {
+                return Column(
+                  children: [
+                    Padding(
+                      padding: EdgeInsets.only(top: 300.h),
+                      child: Text(
+                        'Ask Me Any Question',
+                        style: AppTextStyles.poppinsBold30Blue,
+                      ),
+                    ),
+                    const Spacer(),
+                    CustomTFF(
+                      controller: chatbotCubit.messageController,
+                      hintText: 'write your message',
+                      kbType: TextInputType.multiline,
+                      suffixIcon: IconButton(
+                        onPressed: () {
+                          chatbotCubit
+                              .addMessage(chatbotCubit.messageController.text);
+                          chatbotCubit.messageController.clear();
+                        },
+                        icon: const Icon(Icons.send),
+                      ),
+                    ),
+                  ],
+                );
+              } else {
+                return Column(
+                  children: [
+                    Expanded(
+                      child: SingleChildScrollView(
+                        child: Column(
+                          children: List.generate(
+                            chatbotCubit.messages.length,
+                            (index) => Align(
+                              alignment: index % 2 == 0
+                                  ? Alignment.centerRight
+                                  : Alignment.centerLeft,
+                              child: Container(
+                                constraints: BoxConstraints(
+                                    minWidth: 64.w, maxWidth: 300.w),
+                                padding: const EdgeInsets.all(12.0),
+                                margin: const EdgeInsets.all(8),
+                                decoration: BoxDecoration(
+                                  color: index % 2 == 0
+                                      ? AppColors.mainBlue
+                                      : AppColors.homeCategoryCardsColor,
+                                  borderRadius: index % 2 == 0
+                                      ? const BorderRadius.only(
+                                          bottomLeft: Radius.circular(25),
+                                          bottomRight: Radius.circular(25),
+                                          topLeft: Radius.circular(25),
+                                        )
+                                      : const BorderRadius.only(
+                                          topRight: Radius.circular(25),
+                                          bottomRight: Radius.circular(25),
+                                          topLeft: Radius.circular(25),
+                                        ),
+                                ),
+                                child: index % 2 == 0
+                                    ? Text(chatbotCubit.messages[index],
+                                        style: AppTextStyles
+                                            .poppinsMedium14Black
+                                            .copyWith(color: Colors.white))
+                                    : BlocBuilder<ChatbotCubit, ChatbotState>(
+                                        buildWhen: (previous, current) =>
+                                            current is ChatbotFailure ||
+                                            current is ChatbotSuccess ||
+                                            current is ChatbotLoading,
+                                        builder: (context, state) {
+                                          if (state is ChatbotFailure) {
+                                            return Text(
+                                              'Sorry , Error has occured',
+                                              style: AppTextStyles
+                                                  .poppinsMedium14Black,
+                                              textAlign: TextAlign.left,
+                                            );
+                                          }
+                                          if (state is ChatbotSuccess) {
+                                            return Text(
+                                              chatbotCubit.messages[index],
+                                              style: AppTextStyles
+                                                  .poppinsMedium14Black,
+                                              textAlign: TextAlign.left,
+                                            );
+                                          } else {
+                                            return const Center(
+                                                child:
+                                                    CircularProgressIndicator());
+                                          }
+                                        },
+                                      ),
+                              ),
+                            ),
                           ),
                         ),
                       ),
                     ),
-                  ),
-                ),
-              ),
-              CustomTFF(
-                hintText: 'write your message',
-                kbType: TextInputType.multiline,
-                suffixIcon: IconButton(
-                  onPressed: () {},
-                  icon: const Icon(Icons.send),
-                ),
-              ),
-            ],
+                    CustomTFF(
+                      controller: chatbotCubit.messageController,
+                      hintText: 'write your message',
+                      kbType: TextInputType.multiline,
+                      suffixIcon: IconButton(
+                        onPressed: () {
+                          chatbotCubit
+                              .addMessage(chatbotCubit.messageController.text);
+                          chatbotCubit.messageController.clear();
+                        },
+                        icon: const Icon(Icons.send),
+                      ),
+                    ),
+                  ],
+                );
+              }
+            },
           ),
         ),
       ),
