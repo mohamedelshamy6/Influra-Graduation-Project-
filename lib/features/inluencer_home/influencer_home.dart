@@ -15,16 +15,25 @@ class InfluencerHome extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            SizedBox(height: 20.h,),
-            Text('Requests (4)', style: AppTextStyles.poppinsSemiBold16Black,),
-            SizedBox(height: 20.h,),
+            SizedBox(
+              height: 20.h,
+            ),
+            Text(
+              'Requests (4)',
+              style: AppTextStyles.poppinsSemiBold16Black,
+            ),
+            SizedBox(
+              height: 20.h,
+            ),
             Expanded(
                 child: ListView.separated(
-                  padding: EdgeInsets.only(bottom: 120.h),
-                    separatorBuilder: (context,index)=>SizedBox(height: 30.h,),
-                    itemBuilder: (context,index)=> const RequestTile(),
-                    itemCount: 20,)
-            )
+              padding: EdgeInsets.only(bottom: 120.h),
+              separatorBuilder: (context, index) => SizedBox(
+                height: 30.h,
+              ),
+              itemBuilder: (context, index) => const RequestTile(),
+              itemCount: 20,
+            ))
           ],
         ),
       ),

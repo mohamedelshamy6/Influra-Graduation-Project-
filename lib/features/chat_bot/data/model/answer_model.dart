@@ -4,6 +4,6 @@ class AnswerModel {
   AnswerModel({required this.message});
 
   factory AnswerModel.fromJson(Map<String, dynamic> json) {
-    return AnswerModel(message: json['message']);
+    return AnswerModel(message: json['output']);
   }
 }

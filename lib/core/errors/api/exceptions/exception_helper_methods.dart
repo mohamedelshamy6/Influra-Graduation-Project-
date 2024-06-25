@@ -60,7 +60,7 @@ class ExceptionHelperMethods {
     if (e.response != null || e.response!.data != null) {
       if (e.response!.data is String) {
         throw ApiException(
-          errorModel: ErrorModel.fromJson({'message': '${e.response!.data}'}),
+          errorModel: ErrorModel.fromJson({'error': '${e.response!.data}'}),
         );
       } else if (e.response!.data is Map<String, dynamic>) {
         throw ApiException(
@@ -81,8 +81,8 @@ class ExceptionHelperMethods {
   }
 
   static Map<String, dynamic> get connectionErrorMessage =>
-      {'message': 'Something went wrong , try again later.'};
+      {'error': 'Something went wrong , try again later.'};
 
   static Map<String, dynamic> get noInternetErrorMessage =>
-      {'message': 'Check your internet connection.'};
+      {'error': 'Check your internet connection.'};
 }
