@@ -1,9 +1,9 @@
 flutter_native_splash:
   color: "#5771C3"
-  image: assets/icons/influra_before_android12.png
+  image: assets/images/background.png
 
   android_12:
-    image: assets/icons/influra_android12_after.png
+    image: assets/images/background.png
     color: "#5771C3"
 
   ios: true

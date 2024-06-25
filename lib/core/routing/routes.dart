@@ -17,6 +17,7 @@ class Routes {
   static const String startChatBot = 'startChatBot';
   static const String chatBot = 'chatBot';
   static const String requests = 'requests';
+  static const String splash = 'splash';
   static const String language = 'language';
   static const String influencerAccount = 'influencerAccount';
   static const String ownerProfile = 'ownerProfile';

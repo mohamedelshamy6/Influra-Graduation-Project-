@@ -10,6 +10,7 @@ import 'package:influra/features/settings/view/screens/owner_profile.dart';
 import 'package:influra/features/settings/view/screens/privacy_policy.dart';
 import 'package:influra/features/settings/view/screens/requests.dart';
 import 'package:influra/features/settings/view/screens/terms.dart';
+import 'package:influra/features/spalsh/view/screens/splash_screen.dart';
 import '../../features/forget_password/logic/cubit/forget_password_cubit.dart';
 import '../../features/forget_password/view/screens/forget_password_screen.dart';
 import '../../features/forget_password/view/screens/new_password_screen.dart';
@@ -103,6 +104,10 @@ class AppRoutes {
       case Routes.influencerAccount:
         return MaterialPageRoute(
           builder: (context) => const InfluencerAccount(),
+        );
+      case Routes.splash:
+        return MaterialPageRoute(
+          builder: (context) => const SplashScreen(),
         );
       case Routes.requests:
         return MaterialPageRoute(
