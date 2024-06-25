@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:influra/features/chat_bot/logic/cubit/chatbot_cubit.dart';
 import 'package:influra/features/chat_bot/views/screens/chat_screen.dart';
 import 'package:influra/features/chat_bot/views/screens/start_chat_bot.dart';
 import 'package:influra/features/influencer_account/influencer_account.dart';
@@ -94,7 +95,10 @@ class AppRoutes {
         );
       case Routes.chatBot:
         return MaterialPageRoute(
-          builder: (context) => const ChatScreen(),
+          builder: (context) => BlocProvider<ChatbotCubit>(
+            create: (context) => ChatbotCubit(),
+            child: const ChatScreen(),
+          ),
         );
       case Routes.influencerAccount:
         return MaterialPageRoute(
