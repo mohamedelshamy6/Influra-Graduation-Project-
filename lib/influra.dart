@@ -16,8 +16,7 @@ class InfluraApp extends StatelessWidget {
       minTextAdapt: true,
       splitScreenMode: true,
       builder: (context, _) => MaterialApp(
-        // initialRoute: Routes.botNavbar,
-        initialRoute: Routes.signUpSelection,
+        initialRoute: Routes.splash,
         onGenerateRoute: AppRoutes().generateRoute,
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
