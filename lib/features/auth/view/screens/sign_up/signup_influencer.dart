@@ -85,7 +85,6 @@ class SignUpInfluencer extends StatelessWidget {
                     prefixIcon: SvgPicture.asset(Assets.iconsAuthLock),
                     kbType: TextInputType.visiblePassword,
                     validate: (value) {
-                      // ToDo change validation confirm password value with password field value
                       return ValidationErrorTexts.confirmPasswordValidation(
                         value,
                         value,

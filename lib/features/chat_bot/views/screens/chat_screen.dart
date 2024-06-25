@@ -83,7 +83,13 @@ class _ChatScreenState extends State<ChatScreen> {
                       hintText: 'write your message',
                       kbType: TextInputType.multiline,
                       suffixIcon: IconButton(
-                        onPressed: () {
+                        onPressed: () async {
+                          chatbotCubit.askBot(
+                            'chat',
+                            data: {
+                              'instruction': chatbotCubit.messageController.text
+                            },
+                          );
                           chatbotCubit
                               .addMessage(chatbotCubit.messageController.text);
                           chatbotCubit.messageController.clear();
@@ -131,34 +137,12 @@ class _ChatScreenState extends State<ChatScreen> {
                                         style: AppTextStyles
                                             .poppinsMedium14Black
                                             .copyWith(color: Colors.white))
-                                    : BlocBuilder<ChatbotCubit, ChatbotState>(
-                                        buildWhen: (previous, current) =>
-                                            current is ChatbotFailure ||
-                                            current is ChatbotSuccess ||
-                                            current is ChatbotLoading,
-                                        builder: (context, state) {
-                                          if (state is ChatbotFailure) {
-                                            return Text(
-                                              'Sorry , Error has occured',
-                                              style: AppTextStyles
-                                                  .poppinsMedium14Black,
-                                              textAlign: TextAlign.left,
-                                            );
-                                          }
-                                          if (state is ChatbotSuccess) {
-                                            return Text(
-                                              chatbotCubit.messages[index],
-                                              style: AppTextStyles
-                                                  .poppinsMedium14Black,
-                                              textAlign: TextAlign.left,
-                                            );
-                                          } else {
-                                            return const Center(
-                                                child:
-                                                    CircularProgressIndicator());
-                                          }
-                                        },
-                                      ),
+                                    : Text(
+                                      chatbotCubit.messages[index],
+                                      style: AppTextStyles
+                                          .poppinsMedium14Black,
+                                      textAlign: TextAlign.left,
+                                    ),
                               ),
                             ),
                           ),
@@ -171,6 +155,9 @@ class _ChatScreenState extends State<ChatScreen> {
                       kbType: TextInputType.multiline,
                       suffixIcon: IconButton(
                         onPressed: () {
+                          chatbotCubit.askBot('chat', data: {
+                            'instruction': chatbotCubit.messageController.text
+                          });
                           chatbotCubit
                               .addMessage(chatbotCubit.messageController.text);
                           chatbotCubit.messageController.clear();

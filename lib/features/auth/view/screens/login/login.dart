@@ -76,11 +76,6 @@ class LoginScreen extends StatelessWidget {
                       style: TextButton.styleFrom(
                           foregroundColor: Colors.transparent,
                           overlayColor: Colors.transparent),
-                      // style: const ButtonStyle(
-                      //   overlayColor:
-                      //       MaterialStatePropertyAll(Colors.transparent),
-                      //   splashFactory: NoSplash.splashFactory,
-                      // ),
                       onPressed: () {
                         Navigator.pushNamed(context, Routes.forgotPassword);
                       },
@@ -102,8 +97,7 @@ class LoginScreen extends StatelessWidget {
                         Navigator.pushAndRemoveUntil(
                             context,
                             MaterialPageRoute(
-                                builder: (context) =>
-                                    const BottomNavBar()),
+                                builder: (context) => const BottomNavBar()),
                             (route) => false);
                       }
                     },

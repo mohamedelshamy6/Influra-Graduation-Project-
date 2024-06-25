@@ -1,6 +1,8 @@
 import 'app_images.dart';
 
 class AppConstants {
+
+  static const String baseUrl = 'https://enjoyed-wahoo-divine.ngrok-free.app/';
   static const List<String> influenersImages = [
     Assets.imagesInfluencersElwakil,
     Assets.imagesInfluencersSrry,

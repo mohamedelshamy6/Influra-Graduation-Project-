@@ -10,7 +10,7 @@ import '../../data/model/answer_model.dart';
 part 'chatbot_state.dart';
 
 class ChatbotCubit extends Cubit<ChatbotState> {
-  ChatbotCubit() : super(ChatbotInitial());
+  ChatbotCubit(this.answerRepo) : super(ChatbotInitial());
   List<String> messages = [];
   late AnswerRepo answerRepo;
   TextEditingController messageController = TextEditingController();
@@ -22,7 +22,7 @@ class ChatbotCubit extends Cubit<ChatbotState> {
     emit(MessageAdded());
   }
 
-  Future<void> postQuestionsAnswers(
+  Future<void> askBot(
     String path, {
     dynamic data,
   }) async {
