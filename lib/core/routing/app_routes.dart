@@ -53,7 +53,9 @@ class AppRoutes {
         );
       case Routes.loginScreen:
         return CustomPageRoute(
-          builder: (context) => const LoginScreen(),
+          builder: (context) => LoginScreen(
+            toGo: args as String,
+          ),
         );
       case Routes.continueSignUpInfluencer:
         return CustomPageRoute(

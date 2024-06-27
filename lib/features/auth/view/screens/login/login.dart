@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:influra/core/widgets/bot_nav_bar.dart';
+import 'package:influra/core/widgets/influencer_nav_screen.dart';
 import '../../../../../core/errors/messages/validation_error_messages.dart';
 import '../../../../../core/routing/routes.dart';
 import '../../widgets/social_integration.dart';
@@ -15,7 +16,8 @@ import '../../widgets/auth_header.dart';
 import '../../widgets/auth_title_svg.dart';
 
 class LoginScreen extends StatelessWidget {
-  const LoginScreen({super.key});
+  final String toGo;
+  const LoginScreen({super.key, required this.toGo});
 
   @override
   Widget build(BuildContext context) {
@@ -93,11 +95,12 @@ class LoginScreen extends StatelessWidget {
                     buttonText: 'Sign in',
                     buttonAction: () {
                       if (formKey.currentState!.validate()) {
-                        // Navigator.pushNamed(context, Routes.botNavbar);
                         Navigator.pushAndRemoveUntil(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => const BottomNavBar()),
+                                builder: (context) => toGo == 'influencerLogin'
+                                    ? const InfluencerNavScreen()
+                                    : const BottomNavBar()),
                             (route) => false);
                       }
                     },

@@ -110,7 +110,9 @@ class SignUpBusinessOwner extends StatelessWidget {
                   integrateWithFacebook: () {},
                   integrateWithInsta: () {},
                 ),
-                const AlreadyHaveAccount(),
+                const AlreadyHaveAccount(
+                  goTo: 'businessLogin',
+                ),
               ],
             ),
           ),

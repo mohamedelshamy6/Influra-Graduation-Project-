@@ -7,5 +7,5 @@ class AppColors {
   static const Color contactDetailsWayBorderColor = Color(0xffE2E8F0);
   static const Color contactDetailsWayUnselectedColor = Color(0xffFAFAFA);
   static const Color currentPinPutBorderColor = Color(0xff455AF7);
-  static const Color pinPutBorderColor = Color.fromARGB(255, 154, 155, 157);
+  static const Color tFFErrorColor = Color(0xffF14E2E);  static const Color pinPutBorderColor = Color.fromARGB(255, 154, 155, 157);
 }

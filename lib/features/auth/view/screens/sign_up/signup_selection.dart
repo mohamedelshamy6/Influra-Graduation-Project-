@@ -53,7 +53,9 @@ class SignUpSelection extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: 150.h),
-                const AlreadyHaveAccount(),
+                const AlreadyHaveAccount(
+                  goTo: '',
+                ),
               ],
             ),
           ),
