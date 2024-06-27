@@ -1,7 +1,7 @@
 class ErrorMessages {
   ErrorMessages._();
   static String errorMessage(String? error) {
-    if (error == 'Invalid credentials') {
+    if (error == 'Invalid credentials' || error == 'api.login_failed') {
       return 'Email or Password is incorrect.';
     }
     if (error == 'The email field must be a valid email address.') {
