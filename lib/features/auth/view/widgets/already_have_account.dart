@@ -4,7 +4,8 @@ import '../../../../core/routing/routes.dart';
 import '../../../../core/theme/app_text_styles.dart';
 
 class AlreadyHaveAccount extends StatelessWidget {
-  const AlreadyHaveAccount({super.key});
+  final String goTo;
+  const AlreadyHaveAccount({super.key, required this.goTo});
 
   @override
   Widget build(BuildContext context) {
@@ -24,6 +25,7 @@ class AlreadyHaveAccount extends StatelessWidget {
           onPressed: () => Navigator.pushNamed(
             context,
             Routes.loginScreen,
+            arguments: goTo,
           ),
           child: Text(
             'Sign In',

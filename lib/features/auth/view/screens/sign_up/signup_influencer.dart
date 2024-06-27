@@ -108,7 +108,9 @@ class SignUpInfluencer extends StatelessWidget {
                     ),
                   ),
                   SizedBox(height: 16.h),
-                  const AlreadyHaveAccount(),
+                  const AlreadyHaveAccount(
+                    goTo: 'influencerLogin',
+                  ),
                 ],
               ),
             ),
