@@ -21,7 +21,9 @@ class AuthRepo {
       var response = await apiServices.post(
         path,
         data: data,
+        isFormData: true,
       );
+
       var result = LoginModel.fromJson(response);
       return Right(result);
     } on ApiException catch (e) {

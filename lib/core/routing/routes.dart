@@ -20,5 +20,6 @@ class Routes {
   static const String splash = 'splash';
   static const String language = 'language';
   static const String influencerAccount = 'influencerAccount';
+  static const String influencerNavbar= 'influencerNavbar';
   static const String ownerProfile = 'ownerProfile';
 }

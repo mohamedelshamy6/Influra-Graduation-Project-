@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:influra/core/networking/dio_handler.dart';
+import 'package:influra/core/widgets/influencer_nav_screen.dart';
+import 'package:influra/features/auth/data/repositories/auth_repo.dart';
+import 'package:influra/features/auth/logic/cubit/cubit/auth_cubit.dart';
 import 'package:influra/features/chat_bot/data/repository/answer_repo.dart';
 import 'package:influra/features/chat_bot/logic/cubit/chatbot_cubit.dart';
 import 'package:influra/features/chat_bot/views/screens/chat_screen.dart';
@@ -53,8 +56,11 @@ class AppRoutes {
         );
       case Routes.loginScreen:
         return CustomPageRoute(
-          builder: (context) => LoginScreen(
-            toGo: args as String,
+          builder: (context) => BlocProvider<AuthCubit>(
+            create: (context) => AuthCubit(AuthRepo(DioHandler())),
+            child: LoginScreen(
+              toGo: args as String,
+            ),
           ),
         );
       case Routes.continueSignUpInfluencer:
@@ -120,6 +126,10 @@ class AppRoutes {
       case Routes.ownerProfile:
         return MaterialPageRoute(
           builder: (context) => const OwnerProfile(),
+        );
+      case Routes.influencerNavbar:
+        return MaterialPageRoute(
+          builder: (context) => const InfluencerNavScreen(),
         );
       case Routes.privacyPolicy:
         return MaterialPageRoute(

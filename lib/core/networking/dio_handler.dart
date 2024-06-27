@@ -9,17 +9,10 @@ class DioHandler extends ApiServices {
 
   DioHandler() {
     BaseOptions baseOptions = BaseOptions(
-      //todo change base url
        baseUrl: AppConstants.baseUrl,
       receiveTimeout: const Duration(seconds: 120),
       sendTimeout: const Duration(seconds: 120),
       connectTimeout: const Duration(seconds: 120),
-      headers: {
-        'Content-Type': 'application/json',
-        'Accept': '*/*',
-        'Connection': 'keep-alive',
-        'Accept-Encoding': 'gzip, deflate, br'
-      },
     );
     dio = Dio(baseOptions);
     dio.interceptors.add(LogInterceptor(

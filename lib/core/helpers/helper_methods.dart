@@ -80,7 +80,7 @@ class HelperMethods {
       SnackBar(
         content: Text(
           title,
-          textAlign: TextAlign.right,
+          textAlign: TextAlign.left,
           style: AppTextStyles.poppinsBold15White,
         ),
         backgroundColor: AppColors.mainBlue,
@@ -96,7 +96,7 @@ class HelperMethods {
       SnackBar(
         content: Text(
           title,
-          textAlign: TextAlign.right,
+          textAlign: TextAlign.left,
           style: AppTextStyles.poppinsBold15White,
         ),
         backgroundColor: AppColors.tFFErrorColor,

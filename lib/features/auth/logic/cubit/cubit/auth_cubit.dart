@@ -18,8 +18,12 @@ class AuthCubit extends Cubit<AuthState> {
   TextEditingController passwordController = TextEditingController();
   TextEditingController passwordConfirmationController =
       TextEditingController();
-  TextEditingController firstNameController = TextEditingController();
-  TextEditingController lastNameController = TextEditingController();
+  TextEditingController fullNameController = TextEditingController();
+  TextEditingController faceBookLinkController = TextEditingController();
+  TextEditingController instagramLinkController = TextEditingController();
+  TextEditingController youtubeLinkController = TextEditingController();
+  TextEditingController xLinkController = TextEditingController();
+  TextEditingController bussinessTypeController = TextEditingController();
   late AuthRepo authRepo;
 
   Future<void> login(String path, dynamic data) async {
