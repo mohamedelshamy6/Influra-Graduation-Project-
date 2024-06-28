@@ -4,7 +4,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../core/theme/app_text_styles.dart';
 
 class LinksContainer extends StatelessWidget {
-  const LinksContainer({Key? key}) : super(key: key);
+ final String name;
+  const LinksContainer({Key? key, required this.name}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +29,7 @@ class LinksContainer extends StatelessWidget {
               SizedBox(
                   width: 360.w,
                   child: Text(
-                    'https://github.com/Mohamed-elsaprot',
+                    'https://facebook.com/$name',
                     style: AppTextStyles.poppinsRegular15Blue,
                   )),
             ],
@@ -50,7 +51,7 @@ class LinksContainer extends StatelessWidget {
               SizedBox(
                   width: 360.w,
                   child: Text(
-                    'https://github.com/Mohamed-elsaprot',
+                    'https://instagram.com/$name',
                     style: AppTextStyles.poppinsRegular15Blue,
                   )),
             ],
@@ -72,7 +73,7 @@ class LinksContainer extends StatelessWidget {
               SizedBox(
                   width: 360.w,
                   child: Text(
-                    'https://github.com/Mohamed-elsaprot',
+                    'https://x.com/$name',
                     style: AppTextStyles.poppinsRegular15Blue,
                   )),
             ],
@@ -94,7 +95,7 @@ class LinksContainer extends StatelessWidget {
               SizedBox(
                   width: 360.w,
                   child: Text(
-                    'https://github.com/Mohamed-elsaprot',
+                    'https://tiktok.com/$name',
                     style: AppTextStyles.poppinsRegular15Blue,
                   )),
             ],

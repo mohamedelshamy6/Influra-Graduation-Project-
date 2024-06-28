@@ -1,4 +1,5 @@
 import 'package:dartz/dartz.dart';
+import 'package:dio/dio.dart';
 import 'package:influra/features/chat_bot/data/model/answer_model.dart';
 
 import '../../../../core/errors/api/exceptions/api_exception.dart';
@@ -12,11 +13,11 @@ class AnswerRepo {
   Future<Either<String, AnswerModel>> askBot(String path,
       {dynamic data}) async {
     try {
-      var response = await apiServices.post(
+      var response = await Dio().post(
         path,
         data: data,
       );
-      var result = AnswerModel.fromJson(response);
+      var result = AnswerModel.fromJson(response.data);
       return Right(result);
     } on ApiException catch (e) {
       return Left(e.errorModel.message!);
