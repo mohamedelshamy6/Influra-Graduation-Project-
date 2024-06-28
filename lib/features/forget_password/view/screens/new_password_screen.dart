@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -14,6 +16,8 @@ class NewPasswordScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    TextEditingController passwordController = TextEditingController();
+    TextEditingController confirmPasswordController = TextEditingController();
     GlobalKey<FormState> formKey = GlobalKey<FormState>();
     return Scaffold(
       appBar: AppBar(),
@@ -37,6 +41,7 @@ class NewPasswordScreen extends StatelessWidget {
                   ),
                   SizedBox(height: 98.h),
                   CustomTFF(
+                    controller: passwordController,
                     prefixIcon: SvgPicture.asset(Assets.iconsAuthLock),
                     hintText: 'New Password',
                     kbType: TextInputType.visiblePassword,
@@ -47,14 +52,14 @@ class NewPasswordScreen extends StatelessWidget {
                   ),
                   SizedBox(height: 32.h),
                   CustomTFF(
+                    controller: confirmPasswordController,
                     prefixIcon: SvgPicture.asset(Assets.iconsAuthLock),
                     hintText: 'Confirm New Password',
                     kbType: TextInputType.visiblePassword,
                     validate: (value) {
-                      //TOdo: add confirm password validation based on new password value.
                       return ValidationErrorTexts.confirmPasswordValidation(
                         value,
-                        value,
+                        passwordController.text,
                       );
                     },
                   ),
@@ -63,7 +68,11 @@ class NewPasswordScreen extends StatelessWidget {
                     buttonText: 'Continue',
                     buttonAction: () {
                       if (formKey.currentState!.validate()) {
-                        HelperMethods.showNewPasswordSuccessDialog(context);
+                        HelperMethods.showLoadingAlertDialog(context);
+                        Timer(const Duration(seconds: 3), () {
+                          Navigator.pop(context);
+                          HelperMethods.showNewPasswordSuccessDialog(context);
+                        });
                       }
                     },
                     buttonStyle: AppTextStyles.poppinsBold26white,

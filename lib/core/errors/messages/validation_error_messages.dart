@@ -19,6 +19,24 @@ class ValidationErrorTexts {
     }
     return null;
   }
+  static String? categoryValidation(String? category) {
+    if (category == null || category.isEmpty || category.trim().isEmpty) {
+      return 'Please enter your bussiness type.';
+    }
+    if (category.contains(RegExp(r'[^\w\s]+')) || category.contains('_')) {
+      return 'Please enter a valid bussiness type.';
+    }
+    if (category.contains(RegExp(r'\s{2,}'))) {
+      return 'Bussiness type cannot have more than one consecutive spaces';
+    }
+    if (!category.contains(RegExp(r'\D+'))) {
+      return 'Please do not use numbers.';
+    }
+    if (category.length < 2) {
+      return 'Bussiness type must be at least 2 characters.';
+    }
+    return null;
+  }
 
   static String? urlValidation(String? link) {
     if (link == null || link.isEmpty) {

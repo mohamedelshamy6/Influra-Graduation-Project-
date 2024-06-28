@@ -3,8 +3,10 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:influra/core/errors/messages/error_messages.dart';
+import 'package:influra/core/helpers/app_constants.dart';
 import 'package:influra/core/helpers/helper_methods.dart';
 import '../../../../../core/errors/messages/validation_error_messages.dart';
+import '../../../../../core/helpers/cache_helper.dart';
 import '../../../../../core/routing/routes.dart';
 import '../../../logic/cubit/cubit/auth_cubit.dart';
 import '../../widgets/social_integration.dart';
@@ -55,6 +57,8 @@ class _LoginScreenState extends State<LoginScreen> {
           listener: (context, state) {
             if (state is LoginSuccess) {
               Navigator.pop(context);
+              CacheHelper().saveData(
+                  key: AppConstants.token, value: state.loginModel.data!.token);
               Navigator.pushNamedAndRemoveUntil(
                 context,
                 widget.toGo == 'influencerLogin'

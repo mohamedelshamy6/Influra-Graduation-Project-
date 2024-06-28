@@ -55,6 +55,7 @@ class AuthRepo {
       var response = await apiServices.post(
         path,
         data: data,
+        isFormData: true,
       );
       var result = SignUpBussinessModel.fromJson(response);
       return Right(result);
@@ -71,6 +72,7 @@ class AuthRepo {
       var response = await apiServices.post(
         path,
         data: data,
+        isFormData: true,
       );
       var result = SignUpInfluencerModel.fromJson(response);
       return Right(result);
