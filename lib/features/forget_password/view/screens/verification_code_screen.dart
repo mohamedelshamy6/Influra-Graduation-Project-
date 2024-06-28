@@ -1,5 +1,8 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import '../../../../core/helpers/helper_methods.dart';
 import '../widgets/timer.dart';
 
 import '../../../../core/routing/routes.dart';
@@ -42,10 +45,14 @@ class VerificationCodeScreen extends StatelessWidget {
                     buttonText: 'Continue',
                     buttonAction: () {
                       if (formKey.currentState!.validate()) {
-                        Navigator.pushNamed(
-                          context,
-                          Routes.newPassword,
-                        );
+                        HelperMethods.showLoadingAlertDialog(context);
+                        Timer(const Duration(seconds: 2), () {
+                          Navigator.pop(context);
+                          Navigator.pushNamed(
+                            context,
+                            Routes.newPassword,
+                          );
+                        });
                       }
                     },
                     buttonStyle: AppTextStyles.poppinsBold26white,

@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:influra/core/networking/dio_handler.dart';
+import 'package:influra/features/auth/data/repositories/auth_repo.dart';
+import 'package:influra/features/auth/logic/cubit/cubit/auth_cubit.dart';
 import '../../features/favourites/view/screens/favourites_screen.dart';
 import '../../features/search/view/screens/search_screen.dart';
 import '../../features/settings/view/screens/settings.dart';
@@ -22,7 +26,10 @@ List pages = [
   const HomeScreen(),
   const SearchScreen(),
   const FavouritesScreen(),
-  const SettingsScreen(),
+  BlocProvider<AuthCubit>(
+    create: (context) => AuthCubit(AuthRepo(DioHandler())),
+    child: const SettingsScreen(),
+  ),
 ];
 
 class _BottomNavBarState extends State<BottomNavBar> {

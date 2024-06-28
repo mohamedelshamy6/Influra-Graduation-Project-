@@ -1,6 +1,9 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:influra/core/helpers/helper_methods.dart';
 import '../../../../core/errors/messages/validation_error_messages.dart';
 import '../../../../core/routing/routes.dart';
 import '../../../../core/theme/app_colors.dart';
@@ -100,7 +103,13 @@ class ResetPasswordScreen extends StatelessWidget {
         ? null
         : () {
             if (formKey.currentState!.validate()) {
-              Navigator.pushNamed(context, Routes.verificationCode);
+              HelperMethods.showLoadingAlertDialog(context);
+              Timer(const Duration(seconds: 3), () {
+                Navigator.pop(context);
+                HelperMethods.showCustomSnackBarSuccess(
+                    context, 'Reset Link Sent Successfully');
+                Navigator.pushNamed(context, Routes.verificationCode);
+              });
             }
           };
   }
@@ -112,7 +121,13 @@ class ResetPasswordScreen extends StatelessWidget {
         ? null
         : () {
             if (formKey.currentState!.validate()) {
-              Navigator.pushNamed(context, Routes.verificationCode);
+              HelperMethods.showLoadingAlertDialog(context);
+              Timer(const Duration(seconds: 3), () {
+                Navigator.pop(context);
+                HelperMethods.showCustomSnackBarSuccess(
+                    context, 'Reset Link Sent Successfully');
+                Navigator.pushNamed(context, Routes.verificationCode);
+              });
             }
           };
   }

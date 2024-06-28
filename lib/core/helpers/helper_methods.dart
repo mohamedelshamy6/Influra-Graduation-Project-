@@ -55,13 +55,11 @@ class HelperMethods {
                     ),
                     SizedBox(height: 32.h),
                     CustomButton(
-                      buttonText: 'Back to Home',
+                      buttonText: 'Back to Login',
                       buttonAction: () {
                         Navigator.pushNamedAndRemoveUntil(
-                          context,
-                          Routes.loginScreen,
-                          (route) => false,
-                        );
+                            context, Routes.loginScreen, (route) => false,
+                            arguments: 'businessLogin');
                       },
                       buttonStyle: AppTextStyles.poppinsBold15White,
                     ),

@@ -48,11 +48,17 @@ class AppRoutes {
         );
       case Routes.signUpInfluencer:
         return CustomPageRoute(
-          builder: (context) => const SignUpInfluencer(),
+          builder: (context) => BlocProvider<AuthCubit>(
+            create: (context) => AuthCubit(AuthRepo(DioHandler())),
+            child: const SignUpInfluencer(),
+          ),
         );
       case Routes.signUpBusinessOwner:
         return CustomPageRoute(
-          builder: (context) => const SignUpBusinessOwner(),
+          builder: (context) => BlocProvider<AuthCubit>(
+            create: (context) => AuthCubit(AuthRepo(DioHandler())),
+            child: const SignUpBusinessOwner(),
+          ),
         );
       case Routes.loginScreen:
         return CustomPageRoute(
@@ -65,7 +71,15 @@ class AppRoutes {
         );
       case Routes.continueSignUpInfluencer:
         return CustomPageRoute(
-          builder: (context) => const ContinueSignUpInfluencer(),
+          builder: (context) => BlocProvider<AuthCubit>(
+            create: (context) => AuthCubit(AuthRepo(DioHandler())),
+            child: ContinueSignUpInfluencer(
+              email: (args as List<String>)[0],
+              password: args[1],
+              name: args[2],
+              passwordConfirmation: args[3],
+            ),
+          ),
         );
       case Routes.forgotPassword:
         return MaterialPageRoute(
