@@ -53,7 +53,7 @@ class AccountTopBody extends StatelessWidget {
         const SizedBox(
           height: 20,
         ),
-        const LinksContainer(),
+        const LinksContainer(name:'Amr Nossohy'),
       ],
     );
   }

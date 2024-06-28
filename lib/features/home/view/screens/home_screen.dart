@@ -1,17 +1,45 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:influra/core/theme/app_colors.dart';
+
 import 'package:influra/features/home/view/screens/influencer_details.dart';
+import 'package:video_player/video_player.dart';
 
 import '../../../../core/helpers/app_constants.dart';
 import '../../../../core/routing/routes.dart';
-import '../../../../core/theme/app_text_styles.dart';
 import '../widgets/categories_card.dart';
 import '../widgets/home_body_title.dart';
 import '../widgets/influencer_card.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
+
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+  late VideoPlayerController _controller;
+  late Future<void> _initializeVideoPlayerFuture;
+  @override
+  void initState() {
+    super.initState();
+    _controller = VideoPlayerController.asset('assets/videos/vid.mp4');
+    _initializeVideoPlayerFuture = _controller.initialize().then((_) {
+      _controller.play();
+      _controller.setLooping(true);
+      setState(() {});
+    });
+    _controller.addListener(() {
+      setState(() {});
+    });
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -23,12 +51,22 @@ class HomeScreen extends StatelessWidget {
             Container(
               height: 245.h,
               color: AppColors.mainBlue,
-              child: Center(
-                child: Text(
-                  'A video will be shown here',
-                  style: AppTextStyles.poppinsBold26white,
-                ),
-              ),
+              child: FutureBuilder(
+                  future: _initializeVideoPlayerFuture,
+                  builder: (context, snapshot) {
+                    if (snapshot.connectionState == ConnectionState.waiting) {
+                      return const Center(child: CircularProgressIndicator());
+                    } else {
+                      return Center(
+                        child: AspectRatio(
+                          aspectRatio: _controller.value.aspectRatio,
+                          child: VideoPlayer(
+                            _controller,
+                          ),
+                        ),
+                      );
+                    }
+                  }),
             ),
             SizedBox(height: 24.h),
             HomeBodyTitle(
@@ -95,6 +133,7 @@ class HomeScreen extends StatelessWidget {
                   onTap: () {
                     Navigator.of(context).push(MaterialPageRoute(
                       builder: (context) => InfluencerDetails(
+                        index: index,
                         category: AppConstants.influenersCategories[index],
                         image: AppConstants.influenersImages[index],
                         name: AppConstants.influenersNames[index],

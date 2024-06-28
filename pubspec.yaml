@@ -47,6 +47,7 @@ dependencies:
   intl_phone_field: ^3.2.0
   pinput: ^4.0.0
   dartz: ^0.10.1
+  video_player: ^2.6.1
   
 #changing the application icon.
 flutter_launcher_icons:
@@ -73,6 +74,7 @@ flutter:
     - assets/images/categories/
     - assets/images/influencers/
     - assets/svgs/
+    - assets/videos/
     - assets/icons/
     - assets/icons/auth/
     - assets/icons/settings/

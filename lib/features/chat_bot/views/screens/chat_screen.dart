@@ -155,7 +155,7 @@ class _ChatScreenState extends State<ChatScreen> {
                       kbType: TextInputType.multiline,
                       suffixIcon: IconButton(
                         onPressed: () {
-                          chatbotCubit.askBot('chat', data: {
+                          chatbotCubit.askBot('https://enjoyed-wahoo-divine.ngrok-free.app/chat', data: {
                             'instruction': chatbotCubit.messageController.text
                           });
                           chatbotCubit
