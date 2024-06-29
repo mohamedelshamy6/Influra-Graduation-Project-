@@ -50,92 +50,86 @@ class _NotificationsState extends State<Notifications> {
           Container(
             height: 0,
           ),
-          Expanded(
-            child: Row(
-              children: [
-                Expanded(
-                  child: Text(
-                    'General Notification',
-                    style: TextStyle(
-                      color: AppColors.mainBlue,
-                      fontSize: 16.sp,
-                      fontWeight: FontWeight.w400,
-                      fontFamily: 'poppins',
-                    ),
+          Row(
+            children: [
+              Expanded(
+                child: Text(
+                  'General Notification',
+                  style: TextStyle(
+                    color: AppColors.mainBlue,
+                    fontSize: 16.sp,
+                    fontWeight: FontWeight.w400,
+                    fontFamily: 'poppins',
                   ),
                 ),
-                Container(
-                  width: 140,
-                ),
-                Switch(
-                  value: switchValue1,
-                  onChanged: (value) {
-                    setState(() {
-                      switchValue1 = value;
-                    });
-                  },
-                  activeColor: AppColors.mainBlue,
-                ),
-              ],
-            ),
+              ),
+              Container(
+                width: 140,
+              ),
+              Switch(
+                value: switchValue1,
+                onChanged: (value) {
+                  setState(() {
+                    switchValue1 = value;
+                  });
+                },
+                activeColor: AppColors.mainBlue,
+              ),
+            ],
           ),
-          Expanded(
-            child: Row(
-              children: [
-                Expanded(
-                  child: Text(
-                    'Sound',
-                    style: TextStyle(
-                      color: AppColors.mainBlue,
-                      fontSize: 16.sp,
-                      fontWeight: FontWeight.w400,
-                      fontFamily: 'poppins',
-                    ),
+          Row(
+            children: [
+              Expanded(
+                child: Text(
+                  'Sound',
+                  style: TextStyle(
+                    color: AppColors.mainBlue,
+                    fontSize: 16.sp,
+                    fontWeight: FontWeight.w400,
+                    fontFamily: 'poppins',
                   ),
                 ),
-                Container(
-                  width: 140,
-                ),
-                Switch(
-                  value: switchValue2,
-                  onChanged: (value) {
-                    setState(() {
-                      switchValue2 = value;
-                    });
-                  },
-                  activeColor: AppColors.mainBlue,
-                ),
-              ],
-            ),
+              ),
+              Container(
+                width: 140,
+              ),
+              Switch(
+                value: switchValue2,
+                onChanged: (value) {
+                  setState(() {
+                    switchValue2 = value;
+                  });
+                },
+                activeColor: AppColors.mainBlue,
+              ),
+            ],
           ),
-          Expanded(
-            child: Row(
-              children: [
-                Expanded(
-                  child: Text(
-                    'Vibrate',
-                    style: TextStyle(
-                      color: AppColors.mainBlue,
-                      fontSize: 16.sp,
-                      fontWeight: FontWeight.w400,
-                      fontFamily: 'poppins',
-                    ),
+          Row(
+            children: [
+              Expanded(
+                child: Text(
+                  'Vibrate',
+                  style: TextStyle(
+                    color: AppColors.mainBlue,
+                    fontSize: 16.sp,
+                    fontWeight: FontWeight.w400,
+                    fontFamily: 'poppins',
                   ),
                 ),
-                Container(
-                  width: 140,
-                ),
-                Switch(
-                  value: switchValue3,
-                  onChanged: (value) {
-                    setState(() {
-                      switchValue3 = value;
-                    });
-                  },
-                  activeColor: AppColors.mainBlue,
-                ),
-              ],
-            ),
+              ),
+              Container(
+                width: 140,
+              ),
+              Switch(
+                value: switchValue3,
+                onChanged: (value) {
+                  setState(() {
+                    switchValue3 = value;
+                  });
+                },
+                activeColor: AppColors.mainBlue,
+              ),
+            ],
           ),
           Container(
             height: 25,
@@ -149,150 +143,140 @@ class _NotificationsState extends State<Notifications> {
               fontFamily: 'poppins',
             ),
           ),
-          Expanded(
-            child: Row(
-              children: [
-                Expanded(
-                  child: Text(
-                    'App updates',
-                    style: TextStyle(
-                      color: AppColors.mainBlue,
-                      fontSize: 16.sp,
-                      fontWeight: FontWeight.w400,
-                      fontFamily: 'poppins',
-                    ),
+          Row(
+            children: [
+              Expanded(
+                child: Text(
+                  'App updates',
+                  style: TextStyle(
+                    color: AppColors.mainBlue,
+                    fontSize: 16.sp,
+                    fontWeight: FontWeight.w400,
+                    fontFamily: 'poppins',
                   ),
                 ),
-                Container(
-                  width: 140,
-                ),
-                Switch(
-                  value: switchValue4,
-                  onChanged: (value) {
-                    setState(() {
-                      switchValue4 = value;
-                    });
-                  },
-                  activeColor: AppColors.mainBlue,
-                ),
-              ],
-            ),
+              ),
+              Container(
+                width: 140,
+              ),
+              Switch(
+                value: switchValue4,
+                onChanged: (value) {
+                  setState(() {
+                    switchValue4 = value;
+                  });
+                },
+                activeColor: AppColors.mainBlue,
+              ),
+            ],
           ),
-          Expanded(
-            child: Row(
-              children: [
-                Expanded(
-                  child: Text(
-                    'Bill Reminder',
-                    style: TextStyle(
-                      color: AppColors.mainBlue,
-                      fontSize: 16.sp,
-                      fontWeight: FontWeight.w400,
-                      fontFamily: 'poppins',
-                    ),
+          Row(
+            children: [
+              Expanded(
+                child: Text(
+                  'Bill Reminder',
+                  style: TextStyle(
+                    color: AppColors.mainBlue,
+                    fontSize: 16.sp,
+                    fontWeight: FontWeight.w400,
+                    fontFamily: 'poppins',
                   ),
                 ),
-                Container(
-                  width: 140,
-                ),
-                Switch(
-                  value: switchValue5,
-                  onChanged: (value) {
-                    setState(() {
-                      switchValue5 = value;
-                    });
-                  },
-                  activeColor: AppColors.mainBlue,
-                ),
-              ],
-            ),
+              ),
+              Container(
+                width: 140,
+              ),
+              Switch(
+                value: switchValue5,
+                onChanged: (value) {
+                  setState(() {
+                    switchValue5 = value;
+                  });
+                },
+                activeColor: AppColors.mainBlue,
+              ),
+            ],
           ),
-          Expanded(
-            child: Row(
-              children: [
-                Expanded(
-                  child: Text(
-                    'Promotion',
-                    style: TextStyle(
-                      color: AppColors.mainBlue,
-                      fontSize: 16.sp,
-                      fontWeight: FontWeight.w400,
-                      fontFamily: 'poppins',
-                    ),
+          Row(
+            children: [
+              Expanded(
+                child: Text(
+                  'Promotion',
+                  style: TextStyle(
+                    color: AppColors.mainBlue,
+                    fontSize: 16.sp,
+                    fontWeight: FontWeight.w400,
+                    fontFamily: 'poppins',
                   ),
                 ),
-                Container(
-                  width: 140,
-                ),
-                Switch(
-                  value: switchValue6,
-                  onChanged: (value) {
-                    setState(() {
-                      switchValue6 = value;
-                    });
-                  },
-                  activeColor: AppColors.mainBlue,
-                ),
-              ],
-            ),
+              ),
+              Container(
+                width: 140,
+              ),
+              Switch(
+                value: switchValue6,
+                onChanged: (value) {
+                  setState(() {
+                    switchValue6 = value;
+                  });
+                },
+                activeColor: AppColors.mainBlue,
+              ),
+            ],
           ),
-          Expanded(
-            child: Row(
-              children: [
-                Expanded(
-                  child: Text(
-                    'Discount Available',
-                    style: TextStyle(
-                      color: AppColors.mainBlue,
-                      fontSize: 16.sp,
-                      fontWeight: FontWeight.w400,
-                      fontFamily: 'poppins',
-                    ),
+          Row(
+            children: [
+              Expanded(
+                child: Text(
+                  'Discount Available',
+                  style: TextStyle(
+                    color: AppColors.mainBlue,
+                    fontSize: 16.sp,
+                    fontWeight: FontWeight.w400,
+                    fontFamily: 'poppins',
                   ),
                 ),
-                Container(
-                  width: 140,
-                ),
-                Switch(
-                  value: switchValue7,
-                  onChanged: (value) {
-                    setState(() {
-                      switchValue7 = value;
-                    });
-                  },
-                  activeColor: AppColors.mainBlue,
-                ),
-              ],
-            ),
+              ),
+              Container(
+                width: 140,
+              ),
+              Switch(
+                value: switchValue7,
+                onChanged: (value) {
+                  setState(() {
+                    switchValue7 = value;
+                  });
+                },
+                activeColor: AppColors.mainBlue,
+              ),
+            ],
           ),
-          Expanded(
-            child: Row(
-              children: [
-                Expanded(
-                  child: Text(
-                    'Payment Request',
-                    style: TextStyle(
-                      color: AppColors.mainBlue,
-                      fontSize: 16.sp,
-                      fontWeight: FontWeight.w400,
-                      fontFamily: 'poppins',
-                    ),
+          Row(
+            children: [
+              Expanded(
+                child: Text(
+                  'Payment Request',
+                  style: TextStyle(
+                    color: AppColors.mainBlue,
+                    fontSize: 16.sp,
+                    fontWeight: FontWeight.w400,
+                    fontFamily: 'poppins',
                   ),
                 ),
-                Container(
-                  width: 140,
-                ),
-                Switch(
-                  value: switchValue8,
-                  onChanged: (value) {
-                    setState(() {
-                      switchValue8 = value;
-                    });
-                  },
-                  activeColor: AppColors.mainBlue,
-                ),
-              ],
-            ),
+              ),
+              Container(
+                width: 140,
+              ),
+              Switch(
+                value: switchValue8,
+                onChanged: (value) {
+                  setState(() {
+                    switchValue8 = value;
+                  });
+                },
+                activeColor: AppColors.mainBlue,
+              ),
+            ],
           ),
           Container(
             height: 25,
@@ -306,63 +290,59 @@ class _NotificationsState extends State<Notifications> {
               fontFamily: 'poppins',
             ),
           ),
-          Expanded(
-            child: Row(
-              children: [
-                Expanded(
-                  child: Text(
-                    'New Service Available',
-                    style: TextStyle(
-                      color: AppColors.mainBlue,
-                      fontSize: 16.sp,
-                      fontWeight: FontWeight.w400,
-                      fontFamily: 'poppins',
-                    ),
+          Row(
+            children: [
+              Expanded(
+                child: Text(
+                  'New Service Available',
+                  style: TextStyle(
+                    color: AppColors.mainBlue,
+                    fontSize: 16.sp,
+                    fontWeight: FontWeight.w400,
+                    fontFamily: 'poppins',
                   ),
                 ),
-                Container(
-                  width: 40,
-                ),
-                Switch(
-                  value: switchValue9,
-                  onChanged: (value) {
-                    setState(() {
-                      switchValue9 = value;
-                    });
-                  },
-                  activeColor: AppColors.mainBlue,
-                ),
-              ],
-            ),
+              ),
+              Container(
+                width: 40,
+              ),
+              Switch(
+                value: switchValue9,
+                onChanged: (value) {
+                  setState(() {
+                    switchValue9 = value;
+                  });
+                },
+                activeColor: AppColors.mainBlue,
+              ),
+            ],
           ),
-          Expanded(
-            child: Row(
-              children: [
-                Expanded(
-                  child: Text(
-                    'New Tips Available',
-                    style: TextStyle(
-                      color: AppColors.mainBlue,
-                      fontSize: 16.sp,
-                      fontWeight: FontWeight.w400,
-                      fontFamily: 'poppins',
-                    ),
+          Row(
+            children: [
+              Expanded(
+                child: Text(
+                  'New Tips Available',
+                  style: TextStyle(
+                    color: AppColors.mainBlue,
+                    fontSize: 16.sp,
+                    fontWeight: FontWeight.w400,
+                    fontFamily: 'poppins',
                   ),
                 ),
-                Container(
-                  width: 40,
-                ),
-                Switch(
-                  value: switchValue10,
-                  onChanged: (value) {
-                    setState(() {
-                      switchValue10 = value;
-                    });
-                  },
-                  activeColor: AppColors.mainBlue,
-                ),
-              ],
-            ),
+              ),
+              Container(
+                width: 40,
+              ),
+              Switch(
+                value: switchValue10,
+                onChanged: (value) {
+                  setState(() {
+                    switchValue10 = value;
+                  });
+                },
+                activeColor: AppColors.mainBlue,
+              ),
+            ],
           ),
         ]),
       ),
