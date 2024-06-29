@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -27,74 +25,83 @@ class _FavouritesScreenState extends State<FavouritesScreen> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: Padding(
-        padding:
-            EdgeInsets.only(right: 24.w, left: 24.w, top: 16.h, bottom: 8.h),
-        child: BlocProvider.of<HomeCubit>(context).favorites.isEmpty
-            ? Center(
-                child: Text(
-                'No Favourites yet.',
-                style: AppTextStyles.poppinsSemiBold30Blue,
-              ))
-            : ListView.separated(
-                separatorBuilder: (context, index) => SizedBox(height: 16.h),
-                itemCount: BlocProvider.of<HomeCubit>(context).favorites.length,
-                itemBuilder: (context, index) {
-                  log('${homeCubit.favorites[index]}');
-                  log(homeCubit.favorites[index]!.category);
-                  return SizedBox(
-                    width: double.infinity,
-                    height: 140.h,
-                    child: Stack(
-                      children: [
-                        Card(
-                          elevation: 4,
-                          surfaceTintColor: Colors.white,
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(20),
-                          ),
-                          child: CardBody(
-                            category: homeCubit.favorites[0]!.category,
-                            influenersImages: homeCubit.favorites[0]!.image,
-                            name: homeCubit.favorites[0]!.name,
-                          ),
-                        ),
-                        Positioned(
-                          top: 2.h,
-                          right: 8.w,
-                          child: IconButton(
-                            highlightColor: Colors.transparent,
-                            onPressed: () {},
-                            icon: const Icon(
-                              Icons.favorite,
-                              color: Colors.red,
+      child: BlocBuilder<HomeCubit, HomeState>(
+        builder: (context, state) {
+          return Padding(
+            padding: EdgeInsets.only(
+                right: 24.w, left: 24.w, top: 16.h, bottom: 8.h),
+            child: BlocProvider.of<HomeCubit>(context).favorites.isEmpty
+                ? Center(
+                    child: Text(
+                    'No Favourites yet.',
+                    style: AppTextStyles.poppinsSemiBold30Blue,
+                  ))
+                : ListView.separated(
+                    separatorBuilder: (context, index) =>
+                        SizedBox(height: 16.h),
+                    itemCount:
+                        BlocProvider.of<HomeCubit>(context).favorites.length,
+                    itemBuilder: (context, index) {
+                      return SizedBox(
+                        width: double.infinity,
+                        height: 140.h,
+                        child: Stack(
+                          children: [
+                            Card(
+                              elevation: 4,
+                              surfaceTintColor: Colors.white,
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(20),
+                              ),
+                              child: CardBody(
+                                category:
+                                    homeCubit.favorites['$index']!.category,
+                                influenersImages:
+                                    homeCubit.favorites['$index']!.image,
+                                name: homeCubit.favorites['$index']!.name,
+                              ),
                             ),
-                          ),
-                        ),
-                        Positioned(
-                          bottom: 12.h,
-                          right: 10.w,
-                          child: CircleAvatar(
-                            backgroundColor:
-                                AppColors.mainBlue.withOpacity(0.9),
-                            radius: 24.r,
-                            child: Center(
+                            Positioned(
+                              top: 2.h,
+                              right: 8.w,
                               child: IconButton(
-                                onPressed: () {},
-                                icon: Icon(
-                                  size: 24.r,
-                                  Icons.message,
-                                  color: Colors.white,
+                                highlightColor: Colors.transparent,
+                                onPressed: () {
+                                  homeCubit.removeFromFavorites(index);
+                                  homeCubit.setUIFavorit(index);
+                                },
+                                icon: const Icon(
+                                  Icons.favorite,
+                                  color: Colors.red,
                                 ),
                               ),
                             ),
-                          ),
+                            Positioned(
+                              bottom: 12.h,
+                              right: 10.w,
+                              child: CircleAvatar(
+                                backgroundColor:
+                                    AppColors.mainBlue.withOpacity(0.9),
+                                radius: 24.r,
+                                child: Center(
+                                  child: IconButton(
+                                    onPressed: () {},
+                                    icon: Icon(
+                                      size: 24.r,
+                                      Icons.message,
+                                      color: Colors.white,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ],
                         ),
-                      ],
-                    ),
-                  );
-                },
-              ),
+                      );
+                    },
+                  ),
+          );
+        },
       ),
     );
   }

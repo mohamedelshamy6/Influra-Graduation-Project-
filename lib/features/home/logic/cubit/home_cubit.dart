@@ -47,7 +47,7 @@ class HomeCubit extends Cubit<HomeState> {
     log('$favorites');
   }
 
-  removeFromFavorites(int index, FavoriteModel favorite) {
+  removeFromFavorites(int index) {
     favorites.remove('$index');
     emit(FavoriteAdded());
     log('$favorites');
