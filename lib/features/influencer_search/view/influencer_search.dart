@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:influra/features/search/data/models/search_model.dart';
 
 import '../../../core/widgets/custom_text_form_field.dart';
 import '../../search/view/widgets/search_body.dart';
@@ -22,7 +23,7 @@ class InfluencerSearch extends StatelessWidget {
                 prefixIcon: Icon(Icons.search),
               ),
               SizedBox(height: 16.h),
-              const Expanded(child: SearchBody()),
+              const Expanded(child: SearchBody(list: <SearchModel>[],)),
             ],
           ),
         ),

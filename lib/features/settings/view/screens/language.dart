@@ -36,39 +36,11 @@ class _LanguageState extends State<Language> {
                 fontWeight: FontWeight.w600,
                 fontFamily: 'poppins',
               )),
-          Expanded(
-            child: Row(
-              children: [
-                const Expanded(
-                  child: Text(
-                    'English (us)',
-                    style: TextStyle(
-                      color: AppColors.mainBlue,
-                      fontSize: 16,
-                      fontWeight: FontWeight.w400,
-                      fontFamily: 'poppins',
-                    ),
-                  ),
-                ),
-                const Spacer(),
-                Radio(
-                  value: 1,
-                  groupValue: groupValue,
-                  onChanged: (value) {
-                    setState(() {
-                      groupValue = value as int;
-                    });
-                  },
-                  activeColor: Colors.blueAccent,
-                )
-              ],
-            ),
-          ),
-          Expanded(
-            child: Row(children: [
+          Row(
+            children: [
               const Expanded(
                 child: Text(
-                  'English (uk)',
+                  'English (us)',
                   style: TextStyle(
                     color: AppColors.mainBlue,
                     fontSize: 16,
@@ -77,8 +49,9 @@ class _LanguageState extends State<Language> {
                   ),
                 ),
               ),
+              const Spacer(),
               Radio(
-                value: 2,
+                value: 1,
                 groupValue: groupValue,
                 onChanged: (value) {
                   setState(() {
@@ -87,8 +60,31 @@ class _LanguageState extends State<Language> {
                 },
                 activeColor: Colors.blueAccent,
               )
-            ]),
+            ],
           ),
+          Row(children: [
+            const Expanded(
+              child: Text(
+                'English (uk)',
+                style: TextStyle(
+                  color: AppColors.mainBlue,
+                  fontSize: 16,
+                  fontWeight: FontWeight.w400,
+                  fontFamily: 'poppins',
+                ),
+              ),
+            ),
+            Radio(
+              value: 2,
+              groupValue: groupValue,
+              onChanged: (value) {
+                setState(() {
+                  groupValue = value as int;
+                });
+              },
+              activeColor: Colors.blueAccent,
+            )
+          ]),
           SizedBox(height: 16.h),
           const Divider(
             color: AppColors.mainBlue,
@@ -101,229 +97,213 @@ class _LanguageState extends State<Language> {
                 fontWeight: FontWeight.w600,
                 fontFamily: 'poppins',
               )),
-          Expanded(
-            child: Row(
-              children: [
-                const Expanded(
-                  child: Text(
-                    'Mandarin',
-                    style: TextStyle(
-                      color: AppColors.mainBlue,
-                      fontSize: 16,
-                      fontWeight: FontWeight.w400,
-                      fontFamily: 'poppins',
-                    ),
+          Row(
+            children: [
+              const Expanded(
+                child: Text(
+                  'Mandarin',
+                  style: TextStyle(
+                    color: AppColors.mainBlue,
+                    fontSize: 16,
+                    fontWeight: FontWeight.w400,
+                    fontFamily: 'poppins',
                   ),
                 ),
-                const Spacer(),
-                Radio(
-                  value: 3,
-                  groupValue: groupValue,
-                  onChanged: (value) {
-                    setState(() {
-                      groupValue = value as int;
-                    });
-                  },
-                  activeColor: Colors.blueAccent,
-                )
-              ],
-            ),
+              ),
+              const Spacer(),
+              Radio(
+                value: 3,
+                groupValue: groupValue,
+                onChanged: (value) {
+                  setState(() {
+                    groupValue = value as int;
+                  });
+                },
+                activeColor: Colors.blueAccent,
+              )
+            ],
           ),
-          Expanded(
-            child: Row(
-              children: [
-                const Expanded(
-                  child: Text(
-                    'Indian',
-                    style: TextStyle(
-                      color: AppColors.mainBlue,
-                      fontSize: 16,
-                      fontWeight: FontWeight.w400,
-                      fontFamily: 'poppins',
-                    ),
+          Row(
+            children: [
+              const Expanded(
+                child: Text(
+                  'Indian',
+                  style: TextStyle(
+                    color: AppColors.mainBlue,
+                    fontSize: 16,
+                    fontWeight: FontWeight.w400,
+                    fontFamily: 'poppins',
                   ),
                 ),
-                const Spacer(),
-                Radio(
-                  value: 4,
-                  groupValue: groupValue,
-                  onChanged: (value) {
-                    setState(() {
-                      groupValue = value as int;
-                    });
-                  },
-                  activeColor: Colors.blueAccent,
-                )
-              ],
-            ),
+              ),
+              const Spacer(),
+              Radio(
+                value: 4,
+                groupValue: groupValue,
+                onChanged: (value) {
+                  setState(() {
+                    groupValue = value as int;
+                  });
+                },
+                activeColor: Colors.blueAccent,
+              )
+            ],
           ),
-          Expanded(
-            child: Row(
-              children: [
-                const Expanded(
-                  child: Text(
-                    'Spanish',
-                    style: TextStyle(
-                      color: AppColors.mainBlue,
-                      fontSize: 16,
-                      fontWeight: FontWeight.w400,
-                      fontFamily: 'poppins',
-                    ),
+          Row(
+            children: [
+              const Expanded(
+                child: Text(
+                  'Spanish',
+                  style: TextStyle(
+                    color: AppColors.mainBlue,
+                    fontSize: 16,
+                    fontWeight: FontWeight.w400,
+                    fontFamily: 'poppins',
                   ),
                 ),
-                const Spacer(),
-                Radio(
-                  value: 5,
-                  groupValue: groupValue,
-                  onChanged: (value) {
-                    setState(() {
-                      groupValue = value as int;
-                    });
-                  },
-                  activeColor: Colors.blueAccent,
-                )
-              ],
-            ),
+              ),
+              const Spacer(),
+              Radio(
+                value: 5,
+                groupValue: groupValue,
+                onChanged: (value) {
+                  setState(() {
+                    groupValue = value as int;
+                  });
+                },
+                activeColor: Colors.blueAccent,
+              )
+            ],
           ),
-          Expanded(
-            child: Row(
-              children: [
-                const Expanded(
-                  child: Text(
-                    'French',
-                    style: TextStyle(
-                      color: AppColors.mainBlue,
-                      fontSize: 16,
-                      fontWeight: FontWeight.w400,
-                      fontFamily: 'poppins',
-                    ),
+          Row(
+            children: [
+              const Expanded(
+                child: Text(
+                  'French',
+                  style: TextStyle(
+                    color: AppColors.mainBlue,
+                    fontSize: 16,
+                    fontWeight: FontWeight.w400,
+                    fontFamily: 'poppins',
                   ),
                 ),
-                const Spacer(),
-                Radio(
-                  value: 6,
-                  groupValue: groupValue,
-                  onChanged: (value) {
-                    setState(() {
-                      groupValue = value as int;
-                    });
-                  },
-                  activeColor: Colors.blueAccent,
-                )
-              ],
-            ),
+              ),
+              const Spacer(),
+              Radio(
+                value: 6,
+                groupValue: groupValue,
+                onChanged: (value) {
+                  setState(() {
+                    groupValue = value as int;
+                  });
+                },
+                activeColor: Colors.blueAccent,
+              )
+            ],
           ),
-          Expanded(
-            child: Row(
-              children: [
-                const Expanded(
-                  child: Text(
-                    'Arabic',
-                    style: TextStyle(
-                      color: AppColors.mainBlue,
-                      fontSize: 16,
-                      fontWeight: FontWeight.w400,
-                      fontFamily: 'poppins',
-                    ),
+          Row(
+            children: [
+              const Expanded(
+                child: Text(
+                  'Arabic',
+                  style: TextStyle(
+                    color: AppColors.mainBlue,
+                    fontSize: 16,
+                    fontWeight: FontWeight.w400,
+                    fontFamily: 'poppins',
                   ),
                 ),
-                const Spacer(),
-                Radio(
-                  value: 7,
-                  groupValue: groupValue,
-                  onChanged: (value) {
-                    setState(() {
-                      groupValue = value as int;
-                    });
-                  },
-                  activeColor: Colors.blueAccent,
-                )
-              ],
-            ),
+              ),
+              const Spacer(),
+              Radio(
+                value: 7,
+                groupValue: groupValue,
+                onChanged: (value) {
+                  setState(() {
+                    groupValue = value as int;
+                  });
+                },
+                activeColor: Colors.blueAccent,
+              )
+            ],
           ),
-          Expanded(
-            child: Row(
-              children: [
-                const Expanded(
-                  child: Text(
-                    'Russian',
-                    style: TextStyle(
-                      color: AppColors.mainBlue,
-                      fontSize: 16,
-                      fontWeight: FontWeight.w400,
-                      fontFamily: 'poppins',
-                    ),
+          Row(
+            children: [
+              const Expanded(
+                child: Text(
+                  'Russian',
+                  style: TextStyle(
+                    color: AppColors.mainBlue,
+                    fontSize: 16,
+                    fontWeight: FontWeight.w400,
+                    fontFamily: 'poppins',
                   ),
                 ),
-                const Spacer(),
-                Radio(
-                  value: 8,
-                  groupValue: groupValue,
-                  onChanged: (value) {
-                    setState(() {
-                      groupValue = value as int;
-                    });
-                  },
-                  activeColor: Colors.blueAccent,
-                )
-              ],
-            ),
+              ),
+              const Spacer(),
+              Radio(
+                value: 8,
+                groupValue: groupValue,
+                onChanged: (value) {
+                  setState(() {
+                    groupValue = value as int;
+                  });
+                },
+                activeColor: Colors.blueAccent,
+              )
+            ],
           ),
-          Expanded(
-            child: Row(
-              children: [
-                const Expanded(
-                  child: Text(
-                    'indonesia',
-                    style: TextStyle(
-                      color: AppColors.mainBlue,
-                      fontSize: 16,
-                      fontWeight: FontWeight.w400,
-                      fontFamily: 'poppins',
-                    ),
+          Row(
+            children: [
+              const Expanded(
+                child: Text(
+                  'indonesia',
+                  style: TextStyle(
+                    color: AppColors.mainBlue,
+                    fontSize: 16,
+                    fontWeight: FontWeight.w400,
+                    fontFamily: 'poppins',
                   ),
                 ),
-                const Spacer(),
-                Radio(
-                  value: 9,
-                  groupValue: groupValue,
-                  onChanged: (value) {
-                    setState(() {
-                      groupValue = value as int;
-                    });
-                  },
-                  activeColor: Colors.blueAccent,
-                )
-              ],
-            ),
+              ),
+              const Spacer(),
+              Radio(
+                value: 9,
+                groupValue: groupValue,
+                onChanged: (value) {
+                  setState(() {
+                    groupValue = value as int;
+                  });
+                },
+                activeColor: Colors.blueAccent,
+              )
+            ],
           ),
-          Expanded(
-            child: Row(
-              children: [
-                const Expanded(
-                  child: Text(
-                    'vitnamese',
-                    style: TextStyle(
-                      color: AppColors.mainBlue,
-                      fontSize: 16,
-                      fontWeight: FontWeight.w400,
-                      fontFamily: 'poppins',
-                    ),
+          Row(
+            children: [
+              const Expanded(
+                child: Text(
+                  'vitnamese',
+                  style: TextStyle(
+                    color: AppColors.mainBlue,
+                    fontSize: 16,
+                    fontWeight: FontWeight.w400,
+                    fontFamily: 'poppins',
                   ),
                 ),
-                const Spacer(),
-                Radio(
-                  value: 10,
-                  groupValue: groupValue,
-                  onChanged: (value) {
-                    setState(() {
-                      groupValue = value as int;
-                    });
-                  },
-                  activeColor: Colors.blueAccent,
-                )
-              ],
-            ),
+              ),
+              const Spacer(),
+              Radio(
+                value: 10,
+                groupValue: groupValue,
+                onChanged: (value) {
+                  setState(() {
+                    groupValue = value as int;
+                  });
+                },
+                activeColor: Colors.blueAccent,
+              )
+            ],
           ),
         ]),
       ),
