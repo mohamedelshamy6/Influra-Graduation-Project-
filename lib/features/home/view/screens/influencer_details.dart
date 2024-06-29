@@ -42,16 +42,14 @@ class _InfluencerDetailsState extends State<InfluencerDetails> {
                               .favoritesList[widget.index] ==
                           true
                       ? BlocProvider.of<HomeCubit>(context).removeFromFavorites(
-                          widget.index,
-                          FavoriteModel(
-                              name: widget.name,
-                              image: widget.image,
-                              category: widget.category))
+                          widget.index
+                          )
                       : BlocProvider.of<HomeCubit>(context).addToFavorites(
                           widget.index,
                           FavoriteModel(
                               name: widget.name,
                               image: widget.image,
+                              index: '${widget.index}',
                               category: widget.category));
                   BlocProvider.of<HomeCubit>(context)
                       .setUIFavorit(widget.index);
