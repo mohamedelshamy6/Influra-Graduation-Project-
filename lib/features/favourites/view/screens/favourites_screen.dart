@@ -42,6 +42,7 @@ class _FavouritesScreenState extends State<FavouritesScreen> {
                     itemCount:
                         BlocProvider.of<HomeCubit>(context).favorites.length,
                     itemBuilder: (context, index) {
+                      var list = homeCubit.favorites.entries.toList();
                       return SizedBox(
                         width: double.infinity,
                         height: 140.h,
@@ -54,11 +55,9 @@ class _FavouritesScreenState extends State<FavouritesScreen> {
                                 borderRadius: BorderRadius.circular(20),
                               ),
                               child: CardBody(
-                                category:
-                                    homeCubit.favorites['$index']!.category,
-                                influenersImages:
-                                    homeCubit.favorites['$index']!.image,
-                                name: homeCubit.favorites['$index']!.name,
+                                category: list[index].value.category,
+                                influenersImages: list[index].value.image,
+                                name: list[index].value.name,
                               ),
                             ),
                             Positioned(
@@ -67,8 +66,10 @@ class _FavouritesScreenState extends State<FavouritesScreen> {
                               child: IconButton(
                                 highlightColor: Colors.transparent,
                                 onPressed: () {
-                                  homeCubit.removeFromFavorites(index);
-                                  homeCubit.setUIFavorit(index);
+                                  homeCubit.removeFromFavorites(
+                                      int.parse(list[index].value.index));
+                                  homeCubit.setUIFavorit(
+                                      int.parse(list[index].value.index));
                                 },
                                 icon: const Icon(
                                   Icons.favorite,
