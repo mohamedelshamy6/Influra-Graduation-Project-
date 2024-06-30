@@ -9,6 +9,7 @@ import 'package:influra/features/chat_bot/logic/cubit/chatbot_cubit.dart';
 import 'package:influra/features/chat_bot/views/screens/chat_screen.dart';
 import 'package:influra/features/chat_bot/views/screens/start_chat_bot.dart';
 import 'package:influra/features/influencer_account/influencer_account.dart';
+import 'package:influra/features/search/data/models/search_model.dart';
 import 'package:influra/features/settings/view/screens/language.dart';
 import 'package:influra/features/settings/view/screens/notification.dart';
 import 'package:influra/features/settings/view/screens/owner_profile.dart';
@@ -163,9 +164,7 @@ class AppRoutes {
       case Routes.influencers:
         return MaterialPageRoute(
           builder: (context) => InfluencersScreen(
-            category: (args as List<List<String>>)[2],
-            image: (args)[1],
-            name: (args)[0],
+            search: (args as List<SearchModel>),
           ),
         );
     }
