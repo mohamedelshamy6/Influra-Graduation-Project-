@@ -48,6 +48,7 @@ dependencies:
   pinput: ^4.0.0
   dartz: ^0.10.1
   video_player: ^2.6.1
+  url_launcher: ^6.3.0
   
 #changing the application icon.
 flutter_launcher_icons:
