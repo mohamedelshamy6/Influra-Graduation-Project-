@@ -47,7 +47,7 @@ class _SearchScreenState extends State<SearchScreen> {
                                 (BuildContext context, StateSetter setState) =>
                                     Container(
                               constraints: BoxConstraints(
-                                  maxHeight: 300.h, minHeight: 75.h),
+                                  maxHeight: 310.h, minHeight: 75.h),
                               child: Padding(
                                 padding: EdgeInsets.symmetric(
                                     horizontal: 10.w, vertical: 16.h),
@@ -117,45 +117,124 @@ class _SearchScreenState extends State<SearchScreen> {
                                     SizedBox(height: 16.h),
                                     isCategoryPrissed
                                         ? Expanded(
-                                            child: DropdownMenu(
-                                              onSelected: (value) {
-                                                setState(() {
-                                                  categoryValue = value;
-                                                });
-                                                log('value $value');
-                                                log('cat value $categoryValue');
-                                              },
-                                              hintText: 'food',
-                                              menuStyle: MenuStyle(
-                                                side: WidgetStatePropertyAll(
-                                                  BorderSide(
-                                                    width: 1.w,
-                                                    color: AppColors.mainBlue,
+                                            child: Theme(
+                                              data: ThemeData(
+                                                  highlightColor:
+                                                      Colors.transparent,
+                                                  hoverColor:
+                                                      Colors.transparent,
+                                                  splashFactory:
+                                                      NoSplash.splashFactory),
+                                              child: DropdownButtonFormField(
+                                                decoration: InputDecoration(
+                                                  border: OutlineInputBorder(
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            8.r),
+                                                    borderSide:
+                                                        const BorderSide(
+                                                      width: 2,
+                                                    ),
                                                   ),
                                                 ),
+                                                onChanged: (value) {
+                                                  setState(() {
+                                                    categoryValue = value;
+                                                  });
+                                                  log('value $value');
+                                                  log('cat value $categoryValue');
+                                                },
+                                                hint: Text(
+                                                  'food',
+                                                  style: AppTextStyles
+                                                      .poppinsBold15blue
+                                                      .copyWith(
+                                                          color: Colors.grey,
+                                                          decoration:
+                                                              TextDecoration
+                                                                  .none,
+                                                          fontSize: 12.sp,
+                                                          fontWeight:
+                                                              FontWeight.w500),
+                                                ),
+                                                items: <DropdownMenuItem>[
+                                                  DropdownMenuItem(
+                                                    value: 'food',
+                                                    child: Text(
+                                                      'food',
+                                                      style: AppTextStyles
+                                                          .poppinsBold15blue
+                                                          .copyWith(
+                                                        decoration:
+                                                            TextDecoration.none,
+                                                        fontSize: 12.sp,
+                                                        fontWeight:
+                                                            FontWeight.w500,
+                                                      ),
+                                                    ),
+                                                  ),
+                                                  DropdownMenuItem(
+                                                    value: 'gaming',
+                                                    child: Text(
+                                                      'gaming',
+                                                      style: AppTextStyles
+                                                          .poppinsBold15blue
+                                                          .copyWith(
+                                                        decoration:
+                                                            TextDecoration.none,
+                                                        fontSize: 12.sp,
+                                                        fontWeight:
+                                                            FontWeight.w500,
+                                                      ),
+                                                    ),
+                                                  ),
+                                                  DropdownMenuItem(
+                                                    value: 'car',
+                                                    child: Text(
+                                                      'car',
+                                                      style: AppTextStyles
+                                                          .poppinsBold15blue
+                                                          .copyWith(
+                                                        decoration:
+                                                            TextDecoration.none,
+                                                        fontSize: 12.sp,
+                                                        fontWeight:
+                                                            FontWeight.w500,
+                                                      ),
+                                                    ),
+                                                  ),
+                                                  DropdownMenuItem(
+                                                    value: 'football',
+                                                    child: Text(
+                                                      'football',
+                                                      style: AppTextStyles
+                                                          .poppinsBold15blue
+                                                          .copyWith(
+                                                        decoration:
+                                                            TextDecoration.none,
+                                                        fontSize: 12.sp,
+                                                        fontWeight:
+                                                            FontWeight.w500,
+                                                      ),
+                                                    ),
+                                                  ),
+                                                  DropdownMenuItem(
+                                                    value: 'gym',
+                                                    child: Text(
+                                                      'gym',
+                                                      style: AppTextStyles
+                                                          .poppinsBold15blue
+                                                          .copyWith(
+                                                        decoration:
+                                                            TextDecoration.none,
+                                                        fontSize: 12.sp,
+                                                        fontWeight:
+                                                            FontWeight.w500,
+                                                      ),
+                                                    ),
+                                                  ),
+                                                ],
                                               ),
-                                              dropdownMenuEntries: const <DropdownMenuEntry>[
-                                                DropdownMenuEntry(
-                                                  value: 'food',
-                                                  label: 'food',
-                                                ),
-                                                DropdownMenuEntry(
-                                                  value: 'gym',
-                                                  label: 'gym',
-                                                ),
-                                                DropdownMenuEntry(
-                                                  value: 'car',
-                                                  label: 'car',
-                                                ),
-                                                DropdownMenuEntry(
-                                                  value: 'football',
-                                                  label: 'football',
-                                                ),
-                                                DropdownMenuEntry(
-                                                  value: 'gaming',
-                                                  label: 'gaming',
-                                                ),
-                                              ],
                                             ),
                                           )
                                         : Container(),
