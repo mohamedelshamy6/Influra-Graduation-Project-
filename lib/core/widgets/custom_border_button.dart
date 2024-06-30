@@ -21,7 +21,7 @@ class CustomBorderButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       width: width ?? double.infinity,
-      height: height ?? 40.h,
+      height: height ?? 50.h,
       child: MaterialButton(
         onPressed: buttonAction,
         padding: EdgeInsets.zero,
