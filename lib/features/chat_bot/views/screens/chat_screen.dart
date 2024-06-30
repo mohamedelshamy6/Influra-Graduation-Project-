@@ -85,7 +85,6 @@ class _ChatScreenState extends State<ChatScreen> {
                       suffixIcon: IconButton(
                         onPressed: () async {
                           chatbotCubit.askBot(
-                            'chat',
                             data: {
                               'instruction': chatbotCubit.messageController.text
                             },
@@ -94,7 +93,7 @@ class _ChatScreenState extends State<ChatScreen> {
                               .addMessage(chatbotCubit.messageController.text);
                           chatbotCubit.messageController.clear();
                         },
-                        icon: const Icon(Icons.send),
+                        icon: const Icon(Icons.send, color: AppColors.mainBlue),
                       ),
                     ),
                   ],
@@ -138,11 +137,11 @@ class _ChatScreenState extends State<ChatScreen> {
                                             .poppinsMedium14Black
                                             .copyWith(color: Colors.white))
                                     : Text(
-                                      chatbotCubit.messages[index],
-                                      style: AppTextStyles
-                                          .poppinsMedium14Black,
-                                      textAlign: TextAlign.left,
-                                    ),
+                                        chatbotCubit.messages[index],
+                                        style:
+                                            AppTextStyles.poppinsMedium14Black,
+                                        textAlign: TextAlign.left,
+                                      ),
                               ),
                             ),
                           ),
@@ -155,14 +154,14 @@ class _ChatScreenState extends State<ChatScreen> {
                       kbType: TextInputType.multiline,
                       suffixIcon: IconButton(
                         onPressed: () {
-                          chatbotCubit.askBot('https://enjoyed-wahoo-divine.ngrok-free.app/chat', data: {
+                          chatbotCubit.askBot(data: {
                             'instruction': chatbotCubit.messageController.text
                           });
                           chatbotCubit
                               .addMessage(chatbotCubit.messageController.text);
                           chatbotCubit.messageController.clear();
                         },
-                        icon: const Icon(Icons.send),
+                        icon: const Icon(Icons.send, color: AppColors.mainBlue),
                       ),
                     ),
                   ],

@@ -23,12 +23,12 @@ class ChatbotCubit extends Cubit<ChatbotState> {
   }
 
   Future<void> askBot(
-    String path, {
+   {
     dynamic data,
   }) async {
     emit(ChatbotLoading());
     var response = await answerRepo.askBot(
-      path,
+     
       data: data,
     );
 

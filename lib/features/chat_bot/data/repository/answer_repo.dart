@@ -10,11 +10,11 @@ class AnswerRepo {
   AnswerRepo(
     this.apiServices,
   );
-  Future<Either<String, AnswerModel>> askBot(String path,
+  Future<Either<String, AnswerModel>> askBot(
       {dynamic data}) async {
     try {
       var response = await Dio().post(
-        path,
+        'https://enjoyed-wahoo-divine.ngrok-free.app/chat',
         data: data,
       );
       var result = AnswerModel.fromJson(response.data);

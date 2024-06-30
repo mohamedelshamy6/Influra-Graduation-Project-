@@ -212,8 +212,10 @@ class _SearchScreenState extends State<SearchScreen> {
                                             savedCategoryValue = categoryValue;
                                             savedHighPrice = highPrice;
                                             savedLowPrice = lowPrice;
-                                            filterSearch(
-                                                searchText!.toLowerCase());
+                                            searchText == null
+                                                ? null
+                                                : filterSearch(
+                                                    searchText!.toLowerCase());
                                             Navigator.pop(context);
                                           });
                                         },
