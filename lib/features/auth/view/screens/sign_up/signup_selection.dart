@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:influra/core/widgets/influencer_nav_screen.dart';
+import 'package:influra/features/inluencer_home/influencer_home.dart';
 import '../../../../../core/routing/routes.dart';
 import '../../../../../core/theme/app_text_styles.dart';
 import '../../../../../core/widgets/custom_button.dart';
@@ -29,8 +31,7 @@ class SignUpSelection extends StatelessWidget {
                   child: CustomButton(
                     buttonStyle: AppTextStyles.poppinsBold15White,
                     buttonText: 'Sign Up as influencer',
-                    buttonAction: () =>
-                        Navigator.pushNamed(context, Routes.signUpInfluencer),
+                    buttonAction: () => Navigator.pushNamed(context, Routes.signUpInfluencer),
                   ),
                 ),
                 SizedBox(height: 48.h),

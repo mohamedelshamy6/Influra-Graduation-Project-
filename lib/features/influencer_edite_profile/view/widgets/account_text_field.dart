@@ -4,10 +4,11 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../core/theme/app_text_styles.dart';
 
 class AccountTextField extends StatelessWidget {
-  const AccountTextField({Key? key, required this.title, required this.controller, this.secure=false}) : super(key: key);
+  const AccountTextField({Key? key, required this.title, required this.controller, this.secure=false, this.onTap, this.readOnly=false}) : super(key: key);
   final String title;
   final TextEditingController controller;
-  final bool? secure;
+  final bool? secure,readOnly;
+  final void Function()? onTap;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -18,6 +19,8 @@ class AccountTextField extends StatelessWidget {
         TextFormField(
           obscureText: secure!,
           controller: controller,
+          onTap: onTap,
+          readOnly: readOnly!,
           decoration: InputDecoration(
             border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(8.r),

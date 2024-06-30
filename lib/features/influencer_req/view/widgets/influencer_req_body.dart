@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:influra/features/influencer_req/view/widgets/req_actions.dart';
+import 'package:influra/features/influencer_req/view/widgets/req_body.dart';
 
 class InfluencerReqBody extends StatefulWidget {
   const InfluencerReqBody({super.key});
@@ -12,18 +14,11 @@ class _InfluencerReqBodyState extends State<InfluencerReqBody> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
-      body: SingleChildScrollView(
+      body: const SingleChildScrollView(
         padding: EdgeInsets.symmetric(horizontal: 10),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text('Dear [Moamed]'),
-            SizedBox(height: 10,),
-            Text('afjsafjlkskl kjkkjasfkjfs asjkkjsfkjsfkj sakjskfj\ndjfdjsdjbdsjhbdsfsggsv gsgssggg'),
-            
-          ],
-        ),
+        child: ReqBody(),
       ),
+      bottomNavigationBar: const ReqActions(),
     );
   }
 }

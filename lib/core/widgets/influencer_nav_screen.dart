@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:influra/core/helpers/helper_methods.dart';
+import 'package:influra/features/influencer_balance/view/influencer_balance.dart';
 import 'package:influra/features/influencer_messages/influencer_messages.dart';
 import 'package:influra/features/influencer_settings/influencer_settings.dart';
 import 'package:influra/features/inluencer_home/influencer_home.dart';
@@ -18,9 +20,10 @@ class InfluencerNavScreen extends StatefulWidget {
 
 class _InfluencerNavScreenState extends State<InfluencerNavScreen> {
   List influencerPagesList = [
-    const InfluencerHome(),
+    InfluencerHome(),
     const InfluencerSearch(),
-    const InfluencerMessages(),
+    InfluencerBalance(),
+    // const InfluencerMessages(),
     const InfluencerSettings(),
   ];
   int selectedIndex = 0;
@@ -50,8 +53,8 @@ class _InfluencerNavScreenState extends State<InfluencerNavScreen> {
                   label: 'Search',
                 ),
                 BottomNavigationBarItem(
-                  icon: Icon(Icons.telegram),
-                  label: 'messages',
+                  icon: Icon(Icons.monetization_on),
+                  label: 'balance',
                 ),
                 BottomNavigationBarItem(
                   icon: Icon(Icons.settings),
