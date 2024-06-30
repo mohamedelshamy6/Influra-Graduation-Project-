@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:influra/core/widgets/influencer_nav_screen.dart';
-import 'package:influra/features/inluencer_home/influencer_home.dart';
 import '../../../../../core/routing/routes.dart';
 import '../../../../../core/theme/app_text_styles.dart';
 import '../../../../../core/widgets/custom_button.dart';
