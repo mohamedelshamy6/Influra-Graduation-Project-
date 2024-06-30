@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:influra/core/theme/app_colors.dart';
 
 import 'package:influra/features/home/view/screens/influencer_details.dart';
+import 'package:influra/features/search/data/models/search_model.dart';
 import 'package:video_player/video_player.dart';
 
 import '../../../../core/helpers/app_constants.dart';
@@ -105,11 +106,7 @@ class _HomeScreenState extends State<HomeScreen> {
               onPressed: () {
                 Navigator.of(context).pushNamed(
                   Routes.influencers,
-                  arguments: <List<String>>[
-                    AppConstants.influenersNames,
-                    AppConstants.influenersImages,
-                    AppConstants.influenersCategories,
-                  ],
+                  arguments: SearchModel.searchList,
                 );
               },
             ),

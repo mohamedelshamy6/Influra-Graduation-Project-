@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:influra/features/search/data/models/search_model.dart';
 import '../widgets/influencer_card.dart';
 
 import '../../../../core/helpers/app_images.dart';
 import '../../../../core/theme/app_colors.dart';
+import 'influencer_details.dart';
 
 class InfluencersScreen extends StatelessWidget {
-  final List<String> name, image, category;
+  final List<SearchModel> search;
   const InfluencersScreen({
     super.key,
-    required this.name,
-    required this.image,
-    required this.category,
+    required this.search,
   });
 
   @override
@@ -37,14 +37,23 @@ class InfluencersScreen extends StatelessWidget {
               mainAxisSpacing: 5.h,
             ),
             itemBuilder: (context, index) => InfluencersCard(
-              onTap: () {},
-              name: name[index],
-              image: image[index],
+              onTap: () {
+                Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) => InfluencerDetails(
+                    index: index,
+                    category: search[index].category!,
+                    image: search[index].image!,
+                    name: search[index].name!,
+                  ),
+                ));
+              },
+              name: search[index].name!,
+              image: search[index].image!,
               description:
                   'Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum',
-              category: category[index],
+              category: search[index].category!,
             ),
-            itemCount: name.length,
+            itemCount: search.length,
           ),
         ),
       ),

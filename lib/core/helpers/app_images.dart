@@ -96,6 +96,10 @@ class Assets {
   /// assets/icons/settings/person.png
   static const String iconsSettingsPerson = "assets/icons/settings/person.png";
 
+  /// Assets for imagesBackground
+  /// assets/images/background.png
+  static const String imagesBackground = "assets/images/background.png";
+
   /// Assets for imagesCategoriesArts
   /// assets/images/categories/arts.png
   static const String imagesCategoriesArts =
@@ -134,15 +138,60 @@ class Assets {
   static const String imagesIconLauncherBackground =
       "assets/images/icon_launcher_background.png";
 
+  /// Assets for imagesInfluencersAbdobalf
+  /// assets/images/influencers/abdobalf.jpg
+  static const String imagesInfluencersAbdobalf =
+      "assets/images/influencers/abdobalf.jpg";
+
+  /// Assets for imagesInfluencersAdnan
+  /// assets/images/influencers/adnan.jpg
+  static const String imagesInfluencersAdnan =
+      "assets/images/influencers/adnan.jpg";
+
+  /// Assets for imagesInfluencersAmrsherif
+  /// assets/images/influencers/amrsherif.jpg
+  static const String imagesInfluencersAmrsherif =
+      "assets/images/influencers/amrsherif.jpg";
+
+  /// Assets for imagesInfluencersBigramu
+  /// assets/images/influencers/bigramu.jpg
+  static const String imagesInfluencersBigramu =
+      "assets/images/influencers/bigramu.jpg";
+
   /// Assets for imagesInfluencersElwakil
   /// assets/images/influencers/elwakil.png
   static const String imagesInfluencersElwakil =
       "assets/images/influencers/elwakil.png";
 
+  /// Assets for imagesInfluencersFadybakry
+  /// assets/images/influencers/fadybakry.jpg
+  static const String imagesInfluencersFadybakry =
+      "assets/images/influencers/fadybakry.jpg";
+
+  /// Assets for imagesInfluencersFouzan
+  /// assets/images/influencers/fouzan.jpg
+  static const String imagesInfluencersFouzan =
+      "assets/images/influencers/fouzan.jpg";
+
+  /// Assets for imagesInfluencersInforma
+  /// assets/images/influencers/informa.jpg
+  static const String imagesInfluencersInforma =
+      "assets/images/influencers/informa.jpg";
+
+  /// Assets for imagesInfluencersMamdouh
+  /// assets/images/influencers/mamdouh.jpg
+  static const String imagesInfluencersMamdouh =
+      "assets/images/influencers/mamdouh.jpg";
+
   /// Assets for imagesInfluencersMarzouqi
   /// assets/images/influencers/marzouqi.png
   static const String imagesInfluencersMarzouqi =
       "assets/images/influencers/marzouqi.png";
+
+  /// Assets for imagesInfluencersMomenmaher
+  /// assets/images/influencers/momenmaher.jpg
+  static const String imagesInfluencersMomenmaher =
+      "assets/images/influencers/momenmaher.jpg";
 
   /// Assets for imagesInfluencersMon3sh
   /// assets/images/influencers/mon3sh.png
@@ -158,6 +207,11 @@ class Assets {
   /// assets/images/influencers/s7s.png
   static const String imagesInfluencersS7s =
       "assets/images/influencers/s7s.png";
+
+  /// Assets for imagesInfluencersSamouy
+  /// assets/images/influencers/samouy.jpg
+  static const String imagesInfluencersSamouy =
+      "assets/images/influencers/samouy.jpg";
 
   /// Assets for imagesInfluencersSrry
   /// assets/images/influencers/srry.png
@@ -179,4 +233,8 @@ class Assets {
   /// Assets for svgsInfluraWhite
   /// assets/svgs/influra_white.svg
   static const String svgsInfluraWhite = "assets/svgs/influra_white.svg";
+
+  /// Assets for videosVid
+  /// assets/videos/vid.mp4
+  static const String videosVid = "assets/videos/vid.mp4";
 }
