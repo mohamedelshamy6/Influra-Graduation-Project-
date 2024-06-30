@@ -31,8 +31,7 @@ class SignUpSelection extends StatelessWidget {
                   child: CustomButton(
                     buttonStyle: AppTextStyles.poppinsBold15White,
                     buttonText: 'Sign Up as influencer',
-                    buttonAction: () => Navigator.push(context,MaterialPageRoute(builder: (context)=>InfluencerNavScreen()))
-                        // Navigator.pushNamed(context, Routes.signUpInfluencer),
+                    buttonAction: () => Navigator.pushNamed(context, Routes.signUpInfluencer),
                   ),
                 ),
                 SizedBox(height: 48.h),
