@@ -59,6 +59,10 @@ class _LoginScreenState extends State<LoginScreen> {
               Navigator.pop(context);
               CacheHelper().saveData(
                   key: AppConstants.token, value: state.loginModel.data!.token);
+              CacheHelper().saveData(
+                  key: 'name', value: state.loginModel.data!.user!.name);
+              CacheHelper().saveData(
+                  key: 'email', value: state.loginModel.data!.user!.email);
               Navigator.pushNamedAndRemoveUntil(
                 context,
                 widget.toGo == 'influencerLogin'
