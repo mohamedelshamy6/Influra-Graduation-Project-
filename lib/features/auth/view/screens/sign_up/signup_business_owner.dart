@@ -115,6 +115,7 @@ class _SignUpBusinessOwnerState extends State<SignUpBusinessOwner> {
                     Hero(
                       tag: 'email',
                       child: Material(
+                        color: Colors.transparent,
                         child: CustomTFF(
                           controller: authCubit.emailController,
                           hintText: 'Email',
@@ -140,6 +141,7 @@ class _SignUpBusinessOwnerState extends State<SignUpBusinessOwner> {
                     Hero(
                       tag: 'password',
                       child: Material(
+                        color: Colors.transparent,
                         child: CustomTFF(
                           controller: authCubit.passwordController,
                           hintText: 'Password',

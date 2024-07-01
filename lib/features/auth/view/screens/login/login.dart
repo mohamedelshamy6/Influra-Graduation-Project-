@@ -108,6 +108,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     Hero(
                       tag: 'email',
                       child: Material(
+                        color: Colors.transparent,
                         child: CustomTFF(
                           controller: authCubit.emailController,
                           hintText: 'Email',
@@ -123,6 +124,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     Hero(
                       tag: 'password',
                       child: Material(
+                        color: Colors.transparent,
                         child: CustomTFF(
                           controller: authCubit.passwordController,
                           hintText: 'Password',

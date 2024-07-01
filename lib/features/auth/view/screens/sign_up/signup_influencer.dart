@@ -79,6 +79,7 @@ class _SignUpInfluencerState extends State<SignUpInfluencer> {
                   Hero(
                     tag: 'email',
                     child: Material(
+                      color: Colors.transparent,
                       child: CustomTFF(
                         controller: authCubit.emailController,
                         hintText: 'Email',
@@ -94,6 +95,7 @@ class _SignUpInfluencerState extends State<SignUpInfluencer> {
                   Hero(
                     tag: 'password',
                     child: Material(
+                      color: Colors.transparent,
                       child: CustomTFF(
                         controller: authCubit.passwordController,
                         hintText: 'Password',
