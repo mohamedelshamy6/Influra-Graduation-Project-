@@ -16,11 +16,17 @@ class RequestTile extends StatelessWidget {
         Container(
           decoration: BoxDecoration(
               shape: BoxShape.circle,
-              image: DecorationImage(fit: BoxFit.cover, image: NetworkImage(data[1],))),
+              image: DecorationImage(
+                  fit: BoxFit.cover,
+                  image: NetworkImage(
+                    data[1],
+                  ))),
           height: 50,
           width: 50,
         ),
-        SizedBox(width: 20.w,),
+        SizedBox(
+          width: 20.w,
+        ),
         SizedBox(
           width: 240.w,
           child: Text(data[0]),
@@ -33,7 +39,7 @@ class RequestTile extends StatelessWidget {
           width: 70.w,
           buttonAction: () {
             Navigator.push(context,
-                MaterialPageRoute(builder: (context) => InfluencerReq()));
+                MaterialPageRoute(builder: (context) => const InfluencerReq()));
           },
         )
       ],

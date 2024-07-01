@@ -61,8 +61,15 @@ class _LoginScreenState extends State<LoginScreen> {
                   key: AppConstants.token, value: state.loginModel.data!.token);
               CacheHelper().saveData(
                   key: 'name', value: state.loginModel.data!.user!.name);
-              CacheHelper().saveData(
-                  key: 'email', value: state.loginModel.data!.user!.email);
+              state.loginModel.data!.user!.email == null
+                  ? null
+                  : widget.toGo == 'influencerLogin'
+                      ? CacheHelper().saveData(
+                          key: 'iEmail',
+                          value: state.loginModel.data!.user!.email)
+                      : CacheHelper().saveData(
+                          key: 'bEmail',
+                          value: state.loginModel.data!.user!.email);
               Navigator.pushNamedAndRemoveUntil(
                 context,
                 widget.toGo == 'influencerLogin'

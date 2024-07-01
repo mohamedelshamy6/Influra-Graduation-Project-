@@ -5,6 +5,7 @@ import 'package:influra/core/theme/app_colors.dart';
 import 'package:influra/core/widgets/custom_button.dart';
 import 'package:influra/features/home/data/models/faorite_model.dart';
 import 'package:influra/features/home/logic/cubit/home_cubit.dart';
+import 'package:influra/features/home/view/screens/request.dart';
 
 import '../../../../core/theme/app_text_styles.dart';
 import '../../../influencer_account/view/widgets/links_container.dart';
@@ -41,9 +42,8 @@ class _InfluencerDetailsState extends State<InfluencerDetails> {
                   BlocProvider.of<HomeCubit>(context)
                               .favoritesList[widget.index] ==
                           true
-                      ? BlocProvider.of<HomeCubit>(context).removeFromFavorites(
-                          widget.index
-                          )
+                      ? BlocProvider.of<HomeCubit>(context)
+                          .removeFromFavorites(widget.index)
                       : BlocProvider.of<HomeCubit>(context).addToFavorites(
                           widget.index,
                           FavoriteModel(
@@ -108,7 +108,14 @@ class _InfluencerDetailsState extends State<InfluencerDetails> {
               const SizedBox(height: 8),
               CustomButton(
                 buttonText: 'Send Request',
-                buttonAction: () {},
+                buttonAction: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const Request(),
+                    ),
+                  );
+                },
                 buttonStyle: AppTextStyles.poppinsBold15White,
                 width: 160.w,
               ),

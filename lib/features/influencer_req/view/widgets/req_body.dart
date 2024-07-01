@@ -9,7 +9,7 @@ class ReqBody extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const Text('Dear [Moamed]'),
+        const Text('Dear [Mohamed]'),
         const SizedBox(height: 10,),
         const Text('''I am reaching out on behalf of [Women's Handball Academy] and would love to collaborate with you on promoting our academy to your audience. We are impressed by your influence and engagement and believe your platform is a perfect fit for reaching female athletes interested in handball.
 
