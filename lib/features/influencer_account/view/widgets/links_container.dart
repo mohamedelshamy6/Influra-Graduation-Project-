@@ -4,7 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../core/theme/app_text_styles.dart';
 
 class LinksContainer extends StatelessWidget {
- final String name;
+  final String name;
   const LinksContainer({Key? key, required this.name}) : super(key: key);
 
   @override
@@ -29,7 +29,7 @@ class LinksContainer extends StatelessWidget {
               SizedBox(
                   width: 360.w,
                   child: Text(
-                    'https://facebook.com/$name',
+                    'https://facebook.com/${name.split(' ').join('-')}',
                     style: AppTextStyles.poppinsRegular15Blue,
                   )),
             ],
@@ -51,7 +51,7 @@ class LinksContainer extends StatelessWidget {
               SizedBox(
                   width: 360.w,
                   child: Text(
-                    'https://instagram.com/$name',
+                    'https://instagram.com/${name.split(' ').join('-')}',
                     style: AppTextStyles.poppinsRegular15Blue,
                   )),
             ],
@@ -73,7 +73,7 @@ class LinksContainer extends StatelessWidget {
               SizedBox(
                   width: 360.w,
                   child: Text(
-                    'https://x.com/$name',
+                    'https://x.com/${name.split(' ').join('-')}',
                     style: AppTextStyles.poppinsRegular15Blue,
                   )),
             ],
@@ -95,7 +95,7 @@ class LinksContainer extends StatelessWidget {
               SizedBox(
                   width: 360.w,
                   child: Text(
-                    'https://tiktok.com/$name',
+                    'https://tiktok.com/${name.split(' ').join('-')}',
                     style: AppTextStyles.poppinsRegular15Blue,
                   )),
             ],

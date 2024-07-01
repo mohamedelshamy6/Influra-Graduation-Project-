@@ -4,8 +4,9 @@ import 'package:influra/features/influencer_account/view/widgets/links_container
 import '../../../../core/theme/app_text_styles.dart';
 
 class AccountTopBody extends StatelessWidget {
-  const AccountTopBody({Key? key, required this.name, required this.loc}) : super(key: key);
-  final String name,loc;
+  const AccountTopBody({Key? key, required this.name, required this.loc})
+      : super(key: key);
+  final String name, loc;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -34,10 +35,12 @@ class AccountTopBody extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             const Icon(Icons.location_on_rounded),
-            const SizedBox(width: 5,),
+            const SizedBox(
+              width: 5,
+            ),
             Text(
               loc,
-              style: TextStyle(color: Colors.black54, fontSize: 16),
+              style: const TextStyle(color: Colors.black54, fontSize: 16),
             )
           ],
         ),
@@ -51,7 +54,7 @@ class AccountTopBody extends StatelessWidget {
         const SizedBox(
           height: 20,
         ),
-        const LinksContainer(name:'Amr Nossohy'),
+        LinksContainer(name: name),
       ],
     );
   }

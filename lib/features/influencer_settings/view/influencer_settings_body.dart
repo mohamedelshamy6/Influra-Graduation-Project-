@@ -62,7 +62,9 @@ class InfluencerSettingsBody extends StatelessWidget {
             CustomSettingsTile(
               title: 'Logout',
               icon: Icons.logout,
-              fun: () {},
+              fun: () {
+                
+              },
             ),
           ],
         ),
