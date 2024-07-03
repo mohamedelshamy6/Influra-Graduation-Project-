@@ -42,7 +42,7 @@ class HomeCubit extends Cubit<HomeState> {
   }
 
   addToFavorites(int index, FavoriteModel favorite) {
-    // favorites.addEntries({'$index': favorite}.entries);
+    favorites.addEntries({'$index': favorite}.entries);
 
     emit(FavoriteAdded());
     log('$favorites');

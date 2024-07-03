@@ -22,7 +22,7 @@ class InfluraApp extends StatelessWidget {
       builder: (context, _) => BlocProvider<HomeCubit>(
         create: (context) => HomeCubit(HomeRepo(DioHandler())),
         child: MaterialApp(
-          initialRoute: Routes.signUpSelection,
+          initialRoute: Routes.splash,
           onGenerateRoute: AppRoutes().generateRoute,
           debugShowCheckedModeBanner: false,
           theme: ThemeData(
